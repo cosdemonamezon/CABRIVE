@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:CABRIVE/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:CABRIVE/Screen/Chat/ChatScreen.dart';
 
 class NavigationBar extends StatefulWidget {
   NavigationBar({Key key}) : super(key: key);
@@ -37,17 +38,23 @@ class _NavigationBarState extends State<NavigationBar> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SvgPicture.asset(
-                    "assets/icons/chat.svg",
-                    fit: BoxFit.cover, height: 30, width: 30, color: kButtonColor
-                  ),
-                ],
+            GestureDetector(
+              onTap: (){
+                Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => ChatScreen()));
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(
+                      "assets/icons/chat.svg",
+                      fit: BoxFit.cover, height: 30, width: 30, color: kButtonColor
+                    ),
+                  ],
+                ),
               ),
             ),
             Padding(
