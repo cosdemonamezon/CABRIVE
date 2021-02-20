@@ -3,6 +3,7 @@ import 'package:CABRIVE/pages/profile.dart';
 import 'package:CABRIVE/services/facenet.service.dart';
 import 'package:flutter/material.dart';
 import '../home.dart';
+import 'package:CABRIVE/Screen/Avartar/AvartarScreen.dart';
 
 class User {
   String user;
@@ -49,7 +50,7 @@ class _AuthActionButtonState extends State<AuthActionButton> {
     /// resets the face stored in the face net sevice
     this._faceNetService.setPredictedData(null);
     Navigator.push(context,
-        MaterialPageRoute(builder: (BuildContext context) => MyHomePage()));
+        MaterialPageRoute(builder: (BuildContext context) => AvartarScreen()));
   }
 
   Future _signIn(context) async {
