@@ -1,4 +1,6 @@
+import 'package:CABRIVE/Screen/Camera/CemeraScreen.dart';
 import 'package:CABRIVE/Screen/Login/LoginScreen.dart';
+import 'package:CABRIVE/Pages/home.dart';
 import 'package:CABRIVE/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -16,14 +18,14 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'C.A.BRIVE',
-      theme: ThemeData(        
-        //primarySwatch: Colors.blue,
-        primaryColor: kPrimaryColor,        
-        scaffoldBackgroundColor: kBackgroundColor,
-      ),
-      initialRoute: '/',
+        debugShowCheckedModeBanner: false,
+        title: 'C.A.BRIVE',
+        theme: ThemeData(
+          //primarySwatch: Colors.blue,
+          primaryColor: kPrimaryColor,
+          scaffoldBackgroundColor: kBackgroundColor,
+        ),
+        initialRoute: '/',
         routes: <String, WidgetBuilder>{
           '/': (context) => LoginScreen(),
         });
