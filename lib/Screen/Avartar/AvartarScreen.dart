@@ -38,11 +38,6 @@ class AvartarScreen extends StatefulWidget {
 }
 
 class _AvartarScreenState extends State<AvartarScreen> {
-  // final double _initFabHeight = 5.0;
-  // double _fabHeight;
-  // double _panelHeightOpen;
-  // double _panelHeightClosed = 5.0;
-
   final double _initFabHeight = 5.0;
   double _fabHeight;
   double _panelHeightOpen;
@@ -207,14 +202,14 @@ class _AvartarScreenState extends State<AvartarScreen> {
           controller: _pc2,
           maxHeight: _panelHeightOpen,
           minHeight: _panelHeightClosed,
-          parallaxEnabled: false,
-          isDraggable: true,
+          parallaxEnabled: true,
+          isDraggable: false,
           parallaxOffset: .5,
           onPanelClosed: () {
             _setLoading(false);
           },
           color: Color(0xff000000),
-          panelBuilder: (sc) => _panel_new(sc),
+          panelBuilder: (sc) => _panel(sc),
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(18.0), topRight: Radius.circular(18.0)),
           onPanelSlide: (double pos) => setState(() {
@@ -226,7 +221,7 @@ class _AvartarScreenState extends State<AvartarScreen> {
     );
   }
 
-  Widget _panel_new(ScrollController sc) {
+  Widget _panel(ScrollController sc) {
     return MediaQuery.removePadding(
       context: context,
       removeTop: true,
@@ -260,11 +255,11 @@ class _AvartarScreenState extends State<AvartarScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    _category_new("Hair", Icons.favorite, Colors.blue, 1),
-                    _category_new("Face", Icons.restaurant, Colors.red, 0),
-                    _category_new("Eye", Icons.event, Colors.amber, 0),
-                    _category_new("Brow", Icons.more_horiz, Colors.green, 0),
-                    _category_new("Nose", Icons.more_horiz, Colors.green, 0),
+                    _category("Hair", Icons.favorite, Colors.blue, 1),
+                    _category("Face", Icons.restaurant, Colors.red, 0),
+                    _category("Eye", Icons.event, Colors.amber, 0),
+                    _category("Brow", Icons.more_horiz, Colors.green, 0),
+                    _category("Nose", Icons.more_horiz, Colors.green, 0),
                   ],
                 ),
               ],
@@ -282,16 +277,15 @@ class _AvartarScreenState extends State<AvartarScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    _button_new(
-                        "Popular", Icons.favorite, Color(0xff000001), 1),
-                    _button_new("Food", Icons.restaurant, Color(0xff464646), 0),
-                    _button_new("Events", Icons.event, Color(0xff341F0A), 0),
-                    _button_new("More", Icons.more_horiz, Color(0xff1B1105), 0),
-                    _button_new("More", Icons.more_horiz, Color(0xff20394F), 0),
-                    _button_new("More", Icons.more_horiz, Color(0xff505E69), 0),
-                    _button_new("More", Icons.more_horiz, Color(0xff461409), 0),
-                    _button_new("More", Icons.more_horiz, Color(0xff61422E), 0),
-                    _button_new("More", Icons.more_horiz, Color(0xff965C5B), 0),
+                    _button("Popular", Icons.favorite, Color(0xff000001), 1),
+                    _button("Food", Icons.restaurant, Color(0xff464646), 0),
+                    _button("Events", Icons.event, Color(0xff341F0A), 0),
+                    _button("More", Icons.more_horiz, Color(0xff1B1105), 0),
+                    _button("More", Icons.more_horiz, Color(0xff20394F), 0),
+                    _button("More", Icons.more_horiz, Color(0xff505E69), 0),
+                    _button("More", Icons.more_horiz, Color(0xff461409), 0),
+                    _button("More", Icons.more_horiz, Color(0xff61422E), 0),
+                    _button("More", Icons.more_horiz, Color(0xff965C5B), 0),
                   ],
                 ),
               ],
@@ -313,76 +307,48 @@ class _AvartarScreenState extends State<AvartarScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-01.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-01.png"),
+                              ),
                             ),
                           ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-02.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-02.png"),
+                              ),
                             ),
                           ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-03.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-03.png"),
+                              ),
                             ),
                           ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-04.png"),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 12.0,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-05.png"),
-                            ),
-                          ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-06.png"),
-                            ),
-                          ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-07.png"),
-                            ),
-                          ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-08.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-04.png"),
+                              ),
                             ),
                           ),
                         ],
@@ -393,36 +359,100 @@ class _AvartarScreenState extends State<AvartarScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-09.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-05.png"),
+                              ),
                             ),
                           ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-10.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-06.png"),
+                              ),
                             ),
                           ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-11.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-07.png"),
+                              ),
                             ),
                           ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-12.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-08.png"),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 12.0,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-09.png"),
+                              ),
+                            ),
+                          ),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-10.png"),
+                              ),
+                            ),
+                          ),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-11.png"),
+                              ),
+                            ),
+                          ),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-12.png"),
+                              ),
                             ),
                           ),
                         ],
@@ -441,7 +471,7 @@ class _AvartarScreenState extends State<AvartarScreen> {
     );
   }
 
-  Widget _panel(ScrollController sc) {
+  Widget _panel2(ScrollController sc) {
     return MediaQuery.removePadding(
         context: context,
         removeTop: true,
@@ -467,103 +497,37 @@ class _AvartarScreenState extends State<AvartarScreen> {
               height: 18.0,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text(
-                  "Explore Pittsburgh",
-                  style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    fontSize: 24.0,
-                  ),
-                ),
+                _category("Hair", Icons.favorite, Colors.blue, 1),
+                _category("Face", Icons.restaurant, Colors.red, 0),
+                _category("Eye", Icons.event, Colors.amber, 0),
+                _category("Brow", Icons.more_horiz, Colors.green, 0),
+                _category("Nose", Icons.more_horiz, Colors.green, 0),
               ],
             ),
             SizedBox(
-              height: 36.0,
+              height: 18.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                _button("Popular", Icons.favorite, Colors.blue),
-                _button("Food", Icons.restaurant, Colors.red),
-                _button("Events", Icons.event, Colors.amber),
-                _button("More", Icons.more_horiz, Colors.green),
+                _button("Popular", Icons.favorite, Color(0xff000001), 1),
+                _button("Food", Icons.restaurant, Color(0xff464646), 0),
+                _button("Events", Icons.event, Color(0xff341F0A), 0),
+                _button("More", Icons.more_horiz, Color(0xff1B1105), 0),
+                _button("More", Icons.more_horiz, Color(0xff20394F), 0),
+                _button("More", Icons.more_horiz, Color(0xff505E69), 0),
+                _button("More", Icons.more_horiz, Color(0xff461409), 0),
+                _button("More", Icons.more_horiz, Color(0xff61422E), 0),
+                _button("More", Icons.more_horiz, Color(0xff965C5B), 0),
               ],
-            ),
-            SizedBox(
-              height: 36.0,
-            ),
-            Container(
-              padding: const EdgeInsets.only(left: 24.0, right: 24.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text("Images",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                      )),
-                  SizedBox(
-                    height: 12.0,
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 36.0,
-            ),
-            Container(
-              padding: const EdgeInsets.only(left: 24.0, right: 24.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text("About",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                      )),
-                  SizedBox(
-                    height: 12.0,
-                  ),
-                  Text(
-                    """Pittsburgh is a city in the state of Pennsylvania in the United States, and is the county seat of Allegheny County. A population of about 302,407 (2018) residents live within the city limits, making it the 66th-largest city in the U.S. The metropolitan population of 2,324,743 is the largest in both the Ohio Valley and Appalachia, the second-largest in Pennsylvania (behind Philadelphia), and the 27th-largest in the U.S.\n\nPittsburgh is located in the southwest of the state, at the confluence of the Allegheny, Monongahela, and Ohio rivers. Pittsburgh is known both as "the Steel City" for its more than 300 steel-related businesses and as the "City of Bridges" for its 446 bridges. The city features 30 skyscrapers, two inclined railways, a pre-revolutionary fortification and the Point State Park at the confluence of the rivers. The city developed as a vital link of the Atlantic coast and Midwest, as the mineral-rich Allegheny Mountains made the area coveted by the French and British empires, Virginians, Whiskey Rebels, and Civil War raiders.\n\nAside from steel, Pittsburgh has led in manufacturing of aluminum, glass, shipbuilding, petroleum, foods, sports, transportation, computing, autos, and electronics. For part of the 20th century, Pittsburgh was behind only New York City and Chicago in corporate headquarters employment; it had the most U.S. stockholders per capita. Deindustrialization in the 1970s and 80s laid off area blue-collar workers as steel and other heavy industries declined, and thousands of downtown white-collar workers also lost jobs when several Pittsburgh-based companies moved out. The population dropped from a peak of 675,000 in 1950 to 370,000 in 1990. However, this rich industrial history left the area with renowned museums, medical centers, parks, research centers, and a diverse cultural district.\n\nAfter the deindustrialization of the mid-20th century, Pittsburgh has transformed into a hub for the health care, education, and technology industries. Pittsburgh is a leader in the health care sector as the home to large medical providers such as University of Pittsburgh Medical Center (UPMC). The area is home to 68 colleges and universities, including research and development leaders Carnegie Mellon University and the University of Pittsburgh. Google, Apple Inc., Bosch, Facebook, Uber, Nokia, Autodesk, Amazon, Microsoft and IBM are among 1,600 technology firms generating \$20.7 billion in annual Pittsburgh payrolls. The area has served as the long-time federal agency headquarters for cyber defense, software engineering, robotics, energy research and the nuclear navy. The nation's eighth-largest bank, eight Fortune 500 companies, and six of the top 300 U.S. law firms make their global headquarters in the area, while RAND Corporation (RAND), BNY Mellon, Nova, FedEx, Bayer, and the National Institute for Occupational Safety and Health (NIOSH) have regional bases that helped Pittsburgh become the sixth-best area for U.S. job growth.
-                  """,
-                    softWrap: true,
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 24,
             ),
           ],
         ));
   }
 
-  Widget _button(String label, IconData icon, Color color) {
-    return Column(
-      children: <Widget>[
-        Container(
-          padding: const EdgeInsets.all(16.0),
-          child: Icon(
-            icon,
-            color: Colors.white,
-          ),
-          decoration:
-              BoxDecoration(color: color, shape: BoxShape.circle, boxShadow: [
-            BoxShadow(
-              color: Color.fromRGBO(0, 0, 0, 0.15),
-              blurRadius: 8.0,
-            )
-          ]),
-        ),
-        SizedBox(
-          height: 12.0,
-        ),
-        Text(label),
-      ],
-    );
-  }
-
-  Widget _category_new(String label, IconData icon, Color color, int index) {
+  Widget _category(String label, IconData icon, Color color, int index) {
     return Column(
       children: <Widget>[
         FlatButton(
@@ -590,7 +554,7 @@ class _AvartarScreenState extends State<AvartarScreen> {
     );
   }
 
-  Widget _button_new(String label, IconData icon, Color color, int index) {
+  Widget _button(String label, IconData icon, Color color, int index) {
     return Column(
       children: <Widget>[
         Container(

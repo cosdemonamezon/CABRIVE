@@ -75,11 +75,14 @@ class _CalendarScreenState extends State<CalendarScreen> {
       weekendTextStyle: TextStyle(
         color: Colors.white,
       ),
+      weekdayTextStyle: TextStyle(
+        color: Colors.white,
+      ),
       thisMonthDayBorderColor: Colors.white,
 //          weekDays: null, /// for pass null when you do not want to render weekDays
-      headerText: 'Custom Header',
+      headerText: _currentMonth,
       weekFormat: true,
-      markedDatesMap: _markedDateMap,
+      // markedDatesMap: _markedDateMap,
       height: 200.0,
       selectedDateTime: _currentDate2,
       showIconBehindDayText: false,
@@ -87,12 +90,23 @@ class _CalendarScreenState extends State<CalendarScreen> {
       customGridViewPhysics: NeverScrollableScrollPhysics(),
       // markedDateShowIcon: true,
       // markedDateIconMaxShown: 2,
-      // selectedDayTextStyle: TextStyle(
-      //   color: Colors.white,
-      // ),
-      // todayTextStyle: TextStyle(
-      //   color: Colors.white,
-      // ),
+      selectedDayTextStyle:
+          TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+      selectedDayBorderColor: kButtonColor,
+      selectedDayButtonColor: kButtonColor,
+      headerTextStyle: TextStyle(
+        fontSize: 18,
+        color: Colors.white,
+      ),
+      iconColor: Colors.white,
+      // dayButtonColor: kButtonColor,
+      nextDaysTextStyle: TextStyle(
+        color: Colors.white,
+      ),
+      daysTextStyle: TextStyle(
+        color: Colors.white,
+        fontSize: 16,
+      ),
       markedDateIconBuilder: (event) {
         return event.icon;
       },
@@ -108,7 +122,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
     /// Example Calendar Carousel without header and custom prev & next button
     _calendarCarouselNoHeader = CalendarCarousel<Event>(
-      todayBorderColor: kButtonColor,
       todayTextStyle: TextStyle(
         color: Colors.black,
         fontWeight: FontWeight.bold,
@@ -122,11 +135,14 @@ class _CalendarScreenState extends State<CalendarScreen> {
       weekendTextStyle: TextStyle(
         color: Colors.white,
       ),
-      thisMonthDayBorderColor: Colors.white,
+      weekdayTextStyle: TextStyle(
+        color: Colors.white,
+      ),
+      thisMonthDayBorderColor: Colors.transparent,
       weekFormat: false,
 //      firstDayOfWeek: 4,
-      markedDatesMap: _markedDateMap,
-      height: 420.0,
+      // markedDatesMap: _markedDateMap,
+      height: 340.0,
       selectedDateTime: _currentDate2,
       targetDateTime: _targetDateTime,
       customGridViewPhysics: NeverScrollableScrollPhysics(),
@@ -144,9 +160,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
       },
       markedDateMoreShowTotal: true,
       todayButtonColor: kButtonColor,
-      selectedDayTextStyle: TextStyle(
-        color: kButtonColor,
-      ),
+      selectedDayTextStyle:
+          TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+      selectedDayBorderColor: kButtonColor,
+      selectedDayButtonColor: kButtonColor,
       minSelectedDate: _currentDate.subtract(Duration(days: 360)),
       maxSelectedDate: _currentDate.add(Duration(days: 360)),
       prevDaysTextStyle: TextStyle(
@@ -154,6 +171,15 @@ class _CalendarScreenState extends State<CalendarScreen> {
         color: Colors.white,
       ),
       inactiveDaysTextStyle: TextStyle(
+        color: Colors.white,
+        fontSize: 16,
+      ),
+      inactiveWeekendTextStyle: TextStyle(
+        color: Colors.white,
+        fontSize: 16,
+      ),
+      markedDateIconBorderColor: kButtonColor,
+      markedDateMoreCustomTextStyle: TextStyle(
         color: Colors.white,
         fontSize: 16,
       ),
@@ -175,6 +201,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     final height = MediaQuery.of(context).size.height;
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: kInputSearchColor,
       appBar: AppBar(
         actions: <Widget>[
           IconButton(
@@ -191,82 +218,95 @@ class _CalendarScreenState extends State<CalendarScreen> {
                   (route) => false);
             }),
         centerTitle: true,
-        title: Text("Calendar"),
+        title: null,
       ),
       body: ListView(
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              //custom icon
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 16.0),
-                child: _calendarCarousel,
-              ), // This trailing comma makes auto-formatting nicer for build methods.
-              //custom icon without header
-              Container(
-                margin: EdgeInsets.only(
-                  top: 30.0,
-                  bottom: 16.0,
-                  left: 16.0,
-                  right: 16.0,
-                ),
-                child: new Row(
-                  children: <Widget>[
-                    Expanded(
-                        child: Text(
-                      _currentMonth,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24.0,
-                        color: Colors.white,
-                      ),
-                    )),
-                    FlatButton(
-                      child: Text(
-                        'PREV',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          _targetDateTime = DateTime(
-                              _targetDateTime.year, _targetDateTime.month - 1);
-                          _currentMonth =
-                              DateFormat.yMMM().format(_targetDateTime);
-                        });
-                      },
-                    ),
-                    FlatButton(
-                      child: Text(
-                        'NEXT',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          _targetDateTime = DateTime(
-                              _targetDateTime.year, _targetDateTime.month + 1);
-                          _currentMonth =
-                              DateFormat.yMMM().format(_targetDateTime);
-                        });
-                      },
-                    )
-                  ],
-                ),
+          Container(
+            // margin: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: kBackgroundColor,
+              borderRadius: BorderRadius.only(
+                // topLeft: Radius.circular(18),
+                // topRight: Radius.circular(18),
+                bottomLeft: Radius.circular(18),
+                bottomRight: Radius.circular(18),
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 16.0),
-                child: _calendarCarouselNoHeader,
-              ), //
-            ],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                //custom icon
+                Container(
+                  color: kBackgroundColor,
+                  margin: EdgeInsets.symmetric(horizontal: 16.0),
+                  child: _calendarCarousel,
+                ), // This trailing comma makes auto-formatting nicer for build methods.
+                //custom icon without header
+                Container(
+                  color: kBackgroundColor,
+                  margin: EdgeInsets.only(
+                    left: 16.0,
+                    right: 16.0,
+                  ),
+                  child: new Row(
+                    children: <Widget>[
+                      // Expanded(
+                      //     child: Text(
+                      //   _currentMonth,
+                      //   style: TextStyle(
+                      //     fontWeight: FontWeight.bold,
+                      //     fontSize: 24.0,
+                      //     color: Colors.white,
+                      //   ),
+                      // )),
+                      //   FlatButton(
+                      //     child: Text(
+                      //       'PREV',
+                      //       style: TextStyle(
+                      //         fontWeight: FontWeight.bold,
+                      //         fontSize: 14.0,
+                      //         color: Colors.white,
+                      //       ),
+                      //     ),
+                      //     onPressed: () {
+                      //       setState(() {
+                      //         _targetDateTime = DateTime(_targetDateTime.year,
+                      //             _targetDateTime.month - 1);
+                      //         _currentMonth =
+                      //             DateFormat.yMMM().format(_targetDateTime);
+                      //       });
+                      //     },
+                      //   ),
+                      //   FlatButton(
+                      //     child: Text(
+                      //       'NEXT',
+                      //       style: TextStyle(
+                      //         fontWeight: FontWeight.bold,
+                      //         fontSize: 14.0,
+                      //         color: Colors.white,
+                      //       ),
+                      //     ),
+                      //     onPressed: () {
+                      //       setState(() {
+                      //         _targetDateTime = DateTime(_targetDateTime.year,
+                      //             _targetDateTime.month + 1);
+                      //         _currentMonth =
+                      //             DateFormat.yMMM().format(_targetDateTime);
+                      //       });
+                      //     },
+                      //   )
+                    ],
+                  ),
+                ),
+                // Container(
+                //   color: kBackgroundColor,
+                //   margin: EdgeInsets.symmetric(horizontal: 16.0),
+                //   child: _calendarCarouselNoHeader,
+                // ), //
+              ],
+            ),
           ),
           Container(
             height: height,
@@ -327,7 +367,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return Container(
       height: 120,
       decoration: BoxDecoration(
-        color: kInputSearchColor,
+        color: kBackgroundColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(18),
           topRight: Radius.circular(18),

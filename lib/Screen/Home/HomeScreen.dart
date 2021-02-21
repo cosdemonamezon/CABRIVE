@@ -10,7 +10,7 @@ import 'package:CABRIVE/services/ml_vision_service.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:CABRIVE/Screen/Widgets/NavigationBar.dart';
-import 'package:CABRIVE/Screen/Avartar/AvartarScreen.dart';
+import 'package:CABRIVE/Screen/Stadium/StadiumScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (BuildContext context) => SignIn(
+                            builder: (BuildContext context) => SignUp(
                               cameraDescription: cameraDescription,
                             ),
                           ),
@@ -344,7 +344,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontWeight: FontWeight.bold,
                                 color: kFontPrimaryColor)),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context, MaterialPageRoute(builder: (context) => StadiumScreen()));
+                          },
                           child: Text("SEE ALL >",
                               style: TextStyle(
                                   fontSize: 12,
@@ -485,6 +488,200 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
+                  SizedBox(height: 20,),
+                  Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("SPORT",
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: kFontPrimaryColor)),
+                        GestureDetector(
+                          onTap: () {
+                            // Navigator.push(
+                            //   context, MaterialPageRoute(builder: (context) => StadiumScreen()));
+                          },
+                          child: Text("SEE ALL >",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w400,
+                                  color: kFontPrimaryColor)),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 10,),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25),
+                    child: Container(
+                      height: 140,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  SizedBox(height: 20,),
+                  
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("PROMOTIONS",
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: kFontPrimaryColor)),
+                        GestureDetector(
+                          onTap: () {
+                            // Navigator.push(
+                            //   context, MaterialPageRoute(builder: (context) => NewsScreen()));
+                          },
+                          child: Text("SEE ALL >",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w400,
+                                  color: kFontPrimaryColor)),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 200,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Container(
+                          width: 210,
+                          //height: 100,
+                          color: kBackgroundColor,
+                          child: Stack(
+                            alignment: Alignment.topCenter,
+                            children: [
+                              Positioned(
+                                bottom: 3.0,
+                                child: Container(
+                                  height: 120,
+                                  width: 210,
+                                  //color: Colors.white,
+                                  decoration: BoxDecoration(
+                                    color: kBackgroundColor,
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(18),
+                                      topRight: Radius.circular(18),
+                                      bottomLeft: Radius.circular(18),
+                                      bottomRight: Radius.circular(18),
+                                    ),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      
+                                      
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                    //color: Colors.green,
+                                    ),
+                                child: Stack(
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(18),
+                                          topRight: Radius.circular(18),
+                                          bottomLeft: Radius.circular(18),
+                                          bottomRight: Radius.circular(18),
+                                      ),
+                                      child: Image.asset(
+                                        "assets/131982946_3631407893569243_1613121772109122784_n.jpg",
+                                        width: 277,
+                                        height: 180,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Container(
+                          width: 210,
+                          //height: 100,
+                          color: kBackgroundColor,
+                          child: Stack(
+                            alignment: Alignment.topCenter,
+                            children: [
+                              Positioned(
+                                bottom: 3.0,
+                                child: Container(
+                                  height: 120,
+                                  width: 210,
+                                  //color: Colors.white,
+                                  decoration: BoxDecoration(
+                                    color: kBackgroundColor,
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(18),
+                                      topRight: Radius.circular(18),
+                                      bottomLeft: Radius.circular(18),
+                                      bottomRight: Radius.circular(18),
+                                    ),
+                                  ),
+                                  
+                                ),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                    //color: Colors.green,
+                                    ),
+                                child: Stack(
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(18),
+                                          topRight: Radius.circular(18),
+                                          bottomLeft: Radius.circular(18),
+                                          bottomRight: Radius.circular(18),
+                                      ),                                          
+                                      child: Image.asset(
+                                        "assets/131948114_3624474260929273_4187310378479201958_o.jpg",
+                                        width: 277,
+                                        height: 180,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 30,),
                 ],
               ),
             ],
