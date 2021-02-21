@@ -75,7 +75,10 @@ class _AvartarScreenState extends State<AvartarScreen> {
           editstate == true
               ? FlatButton(
                   textColor: Colors.white,
-                  onPressed: () {},
+                  onPressed: () {
+                    _setLoading(false);
+                    _pc2.close();
+                  },
                   child: Text("DONE"),
                   shape:
                       CircleBorder(side: BorderSide(color: Colors.transparent)),
@@ -89,7 +92,10 @@ class _AvartarScreenState extends State<AvartarScreen> {
             ? Container(
                 child: FlatButton(
                   textColor: Colors.white,
-                  onPressed: () {},
+                  onPressed: () {
+                    _setLoading(false);
+                    _pc2.close();
+                  },
                   child: Text("CANCEL"),
                   shape:
                       CircleBorder(side: BorderSide(color: Colors.transparent)),
