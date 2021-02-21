@@ -1,6 +1,7 @@
 import 'package:CABRIVE/Screen/Home/HomeScreen.dart';
 import 'package:CABRIVE/Screen/Login/LoginScreen.dart';
 import 'package:CABRIVE/Screen/Avartar/AvartarScreen.dart';
+import 'package:CABRIVE/Screen/Calendar/CalendarScreen.dart';
 
 import 'package:CABRIVE/Pages/home.dart';
 import 'package:CABRIVE/constants.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: '/',
         routes: <String, WidgetBuilder>{
-          '/': (context) => LoginScreen(),
+          '/': (context) => CalendarScreen(),
           '/Avartar': (context) => AvartarScreen(),
         });
   }
