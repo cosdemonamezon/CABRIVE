@@ -1,3 +1,4 @@
+import 'package:CABRIVE/Screen/Calendar/CalendarScreen.dart';
 import 'package:CABRIVE/Screen/Chat/ChatScreen.dart';
 import 'package:CABRIVE/Screen/Notification/Notification.dart';
 import 'package:CABRIVE/Screen/Profile/ProfileScreen.dart';
@@ -40,7 +41,7 @@ class _NavigationBarState extends State<NavigationBar> {
                       fit: BoxFit.cover,
                       height: 30,
                       width: 30,
-                      color: kButtonColor),
+                      color: Colors.white),
                 ],
               ),
             ),
@@ -59,37 +60,49 @@ class _NavigationBarState extends State<NavigationBar> {
                         fit: BoxFit.cover,
                         height: 30,
                         width: 30,
-                        color: kButtonColor),
+                        color: Colors.white),
                   ],
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SvgPicture.asset("assets/icons/calendar.svg",
-                      fit: BoxFit.cover,
-                      height: 30,
-                      width: 30,
-                      color: kButtonColor),
-                ],
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CalendarScreen()));
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset("assets/icons/calendar.svg",
+                        fit: BoxFit.cover,
+                        height: 30,
+                        width: 30,
+                        color: Colors.white),
+                  ],
+                ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SvgPicture.asset("assets/icons/Alert.svg",
-                      fit: BoxFit.cover,
-                      height: 30,
-                      width: 30,
-                      color: kButtonColor),
-                ],
+            GestureDetector(
+              onTap: () {
+                // Navigator.push(context,
+                //     MaterialPageRoute(builder: (context) => CalendarScreen()));
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset("assets/icons/Alert.svg",
+                        fit: BoxFit.cover,
+                        height: 30,
+                        width: 30,
+                        color: Colors.white),
+                  ],
+                ),
               ),
             ),
             Padding(
@@ -102,50 +115,8 @@ class _NavigationBarState extends State<NavigationBar> {
                       fit: BoxFit.cover,
                       height: 30,
                       width: 30,
-                      color: kButtonColor),
+                      color: Colors.white),
                 ],
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => NotificationScreen()));
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset("assets/icons/Alert.svg",
-                        fit: BoxFit.cover,
-                        height: 30,
-                        width: 30,
-                        color: kButtonColor),
-                  ],
-                ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ProfileScreen()));
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset("assets/icons/User.svg",
-                        fit: BoxFit.cover,
-                        height: 30,
-                        width: 30,
-                        color: kButtonColor),
-                  ],
-                ),
               ),
             ),
           ],

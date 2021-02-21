@@ -19,11 +19,13 @@ class _Detailmath1State extends State<Detailmath1> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios), 
-          onPressed: (){
-            Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => StadiumDetail()), (route) => false);
-          }
-        ),
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => StadiumDetail()),
+                  (route) => false);
+            }),
         centerTitle: true,
         title: Text("DETAIL"),
       ),
@@ -55,8 +57,9 @@ class _Detailmath1State extends State<Detailmath1> {
                           child: Text(
                             "10:00AM",
                             style: TextStyle(
-                              fontWeight: FontWeight.w400, fontSize: 16, color: kFontPrimaryColor
-                            ),
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16,
+                                color: kFontPrimaryColor),
                           ),
                         ),
                       ),
@@ -78,8 +81,9 @@ class _Detailmath1State extends State<Detailmath1> {
                               child: Text(
                                 "LA ROCH.",
                                 style: TextStyle(
-                                  fontWeight: FontWeight.w400, fontSize: 12, color: kFontPrimaryColor
-                                ),
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 12,
+                                    color: kFontPrimaryColor),
                               ),
                             ),
                           ],
@@ -88,13 +92,15 @@ class _Detailmath1State extends State<Detailmath1> {
                       Text(
                         "VS",
                         style: TextStyle(
-                          fontWeight: FontWeight.w400, fontSize: 16, color: kFontPrimaryColor
-                        ),
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                            color: kFontPrimaryColor),
                       ),
                       Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 7),
                             child: Column(
                               children: [
                                 Container(
@@ -107,12 +113,14 @@ class _Detailmath1State extends State<Detailmath1> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(vertical: 5),
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 5),
                                   child: Text(
                                     "BAYONNE",
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w400, fontSize: 12, color: kFontPrimaryColor
-                                    ),
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 12,
+                                        color: kFontPrimaryColor),
                                   ),
                                 ),
                               ],
@@ -125,18 +133,23 @@ class _Detailmath1State extends State<Detailmath1> {
                 ],
               ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Row(
               children: [
                 Text(
                   "COMPETITION STATISTICS",
                   style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: 16, color: kFontPrimaryColor
-                  ),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: kFontPrimaryColor),
                 ),
               ],
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 5),
               child: Row(
@@ -144,8 +157,9 @@ class _Detailmath1State extends State<Detailmath1> {
                   Text(
                     "Lorem Ipsum",
                     style: TextStyle(
-                      fontWeight: FontWeight.w400, fontSize: 14, color: kFontPrimaryColor
-                    ),
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                        color: kFontPrimaryColor),
                   ),
                 ],
               ),
@@ -165,8 +179,9 @@ class _Detailmath1State extends State<Detailmath1> {
                         child: Text(
                           "40%",
                           style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 14, color: kFontPrimaryColor
-                          ),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: kFontPrimaryColor),
                         ),
                       ),
                     ],
@@ -185,8 +200,9 @@ class _Detailmath1State extends State<Detailmath1> {
                         child: Text(
                           "60%",
                           style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 14, color: kFontPrimaryColor
-                          ),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: kFontPrimaryColor),
                         ),
                       ),
                     ],
@@ -194,8 +210,9 @@ class _Detailmath1State extends State<Detailmath1> {
                 ),
               ],
             ),
-
-            SizedBox(height: 12,),
+            SizedBox(
+              height: 12,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 5),
               child: Row(
@@ -203,8 +220,9 @@ class _Detailmath1State extends State<Detailmath1> {
                   Text(
                     "Lorem Ipsum",
                     style: TextStyle(
-                      fontWeight: FontWeight.w400, fontSize: 14, color: kFontPrimaryColor
-                    ),
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                        color: kFontPrimaryColor),
                   ),
                 ],
               ),
@@ -224,8 +242,9 @@ class _Detailmath1State extends State<Detailmath1> {
                         child: Text(
                           "50%",
                           style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 14, color: kFontPrimaryColor
-                          ),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: kFontPrimaryColor),
                         ),
                       ),
                     ],
@@ -244,8 +263,9 @@ class _Detailmath1State extends State<Detailmath1> {
                         child: Text(
                           "50%",
                           style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 14, color: kFontPrimaryColor
-                          ),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: kFontPrimaryColor),
                         ),
                       ),
                     ],
@@ -253,8 +273,9 @@ class _Detailmath1State extends State<Detailmath1> {
                 ),
               ],
             ),
-
-            SizedBox(height: 12,),
+            SizedBox(
+              height: 12,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 5),
               child: Row(
@@ -262,8 +283,9 @@ class _Detailmath1State extends State<Detailmath1> {
                   Text(
                     "Lorem Ipsum",
                     style: TextStyle(
-                      fontWeight: FontWeight.w400, fontSize: 14, color: kFontPrimaryColor
-                    ),
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                        color: kFontPrimaryColor),
                   ),
                 ],
               ),
@@ -283,8 +305,9 @@ class _Detailmath1State extends State<Detailmath1> {
                         child: Text(
                           "45%",
                           style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 14, color: kFontPrimaryColor
-                          ),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: kFontPrimaryColor),
                         ),
                       ),
                     ],
@@ -303,8 +326,9 @@ class _Detailmath1State extends State<Detailmath1> {
                         child: Text(
                           "55%",
                           style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 14, color: kFontPrimaryColor
-                          ),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: kFontPrimaryColor),
                         ),
                       ),
                     ],
@@ -312,18 +336,23 @@ class _Detailmath1State extends State<Detailmath1> {
                 ),
               ],
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Row(
               children: [
                 Text(
                   "FNB STADUIM",
                   style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: 16, color: kFontPrimaryColor
-                  ),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: kFontPrimaryColor),
                 ),
               ],
             ),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -347,63 +376,74 @@ class _Detailmath1State extends State<Detailmath1> {
                     ),
                     child: Column(
                       children: [
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 5),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 "VR Seat ",
                                 style: TextStyle(
-                                  fontWeight: FontWeight.w400, fontSize: 14, color: kFontPrimaryColor
-                                ),
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: kFontPrimaryColor),
                               ),
                               Text(
                                 "25,890",
                                 style: TextStyle(
-                                  fontWeight: FontWeight.w400, fontSize: 16, color: kFontPrimaryColor
-                                ),
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 16,
+                                    color: kFontPrimaryColor),
                               ),
                             ],
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 5),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 "Busy",
                                 style: TextStyle(
-                                  fontWeight: FontWeight.w400, fontSize: 14, color: Colors.red[900]
-                                ),
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: Colors.red[900]),
                               ),
                               Text(
                                 "19,345",
                                 style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 16, color: Colors.red[900]
-                                ),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                    color: Colors.red[900]),
                               ),
                             ],
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 5),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 "Available",
                                 style: TextStyle(
-                                  fontWeight: FontWeight.w400, fontSize: 16, color: Colors.green[700]
-                                ),
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 16,
+                                    color: Colors.green[700]),
                               ),
                               Text(
                                 "6,545",
                                 style: TextStyle(
-                                  fontWeight: FontWeight.w400, fontSize: 16, color: Colors.green[700]
-                                ),
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 16,
+                                    color: Colors.green[700]),
                               )
                             ],
                           ),
@@ -414,7 +454,9 @@ class _Detailmath1State extends State<Detailmath1> {
                 ),
               ],
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             Container(
               height: size.height * 0.08,
               width: double.infinity,
@@ -424,13 +466,14 @@ class _Detailmath1State extends State<Detailmath1> {
               ),
               child: FlatButton(
                 onPressed: () {
-                  Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => FnbStadium1()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => FnbStadium1()));
                 },
-                child: Text(
-                  "WATCH NOW",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: kTextButtonColor)
-                ),
+                child: Text("WATCH NOW",
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: kTextButtonColor)),
               ),
             ),
           ],

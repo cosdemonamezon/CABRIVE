@@ -10,6 +10,8 @@ import 'package:flutter_calendar_carousel/classes/event.dart';
 import 'package:flutter_calendar_carousel/classes/event_list.dart';
 import 'package:intl/intl.dart' show DateFormat;
 
+import 'package:CABRIVE/Screen/Widgets/NavigationBar.dart';
+
 class CalendarScreen extends StatefulWidget {
   CalendarScreen({Key key}) : super(key: key);
 
@@ -316,54 +318,30 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 SizedBox(
                   height: 10,
                 ),
-                newsCard(
+                newsCard_1(
                     "assets/145191267_3741130079263690_2731191343081539548_o.jpg",
                     "Retrouvez le résumé et le…",
                     "La sirène retentit au Stadium et les Noir et Blanc n’ont rien lâché encore un fois et parviennent à décrocher une précieuse victoire"),
                 SizedBox(
                   height: 10,
                 ),
-                newsCard(
+                newsCard_2(
                     "assets/144255167_3737014689675229_3783920849437474356_o.jpg",
                     "⏱ MI-TEMPS",
                     "Après une première période engagée, les Noir et Blanc rentrent aux vestiaires avec 6 points d’avance au tableau d’affichage."),
                 SizedBox(
                   height: 10,
                 ),
-                newsCard(
-                    "assets/131935758_3624002657643100_2330089908347051597_n.jpg",
-                    "« LA » photo qui donne",
-                    "TOUJOURS le sourire, même pour la 3ème fois en un peu plus d’un mois !  Bravo à tous 👏👏👏⚫️⚪️"),
-                SizedBox(
-                  height: 10,
-                ),
-                newsCard(
-                    "assets/144482999_3737138806329484_4986658706291405403_o.jpg",
-                    "C’est une troisième ",
-                    "victoire de la saison à l’extérieur et un nouveau grand pas de fait vers le maintien pour le CAB qui s’impose à Pau ! 👏⚪️⚫️"),
-                SizedBox(
-                  height: 10,
-                ),
-                newsCard(
-                    "assets/142130192_3723244804385551_7472341975798282192_o.jpg",
-                    "[ARBITRES #CABRCT]",
-                    "🙋‍♂️🏉 La rencontre face à Toulon sera dirigée par Adrien Descottes assisté de Thomas Charabas et Christophe Bats sur la touche. Cédric Marchat sera."),
-                SizedBox(
-                  height: 10,
-                ),
-                newsCard(
-                    "assets/144241294_3734758989900799_1924641855745037453_o.jpg",
-                    "Et pour finir la]",
-                    "Les ⚫️⚪️ recevront le RCT - Rugby Club Toulonnais le samedi 3⃣0⃣ janvier à 18h15 au Stadium ."),
               ],
             ),
           ),
         ],
       ),
+      bottomNavigationBar: NavigationBar(),
     );
   }
 
-  Container newsCard(String img, String title, String subtitle) {
+  Container newsCard_1(String img, String title, String subtitle) {
     return Container(
       height: 120,
       decoration: BoxDecoration(
@@ -375,67 +353,190 @@ class _CalendarScreenState extends State<CalendarScreen> {
           bottomRight: Radius.circular(18),
         ),
       ),
-      child: GestureDetector(
-        onTap: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => DetailNews()));
-        },
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Row(
+      child: Stack(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                height: 100,
-                width: 100,
-                decoration: BoxDecoration(
-                  //color: Colors.red,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(18),
-                    topRight: Radius.circular(18),
-                    bottomLeft: Radius.circular(18),
-                    bottomRight: Radius.circular(18),
-                  ),
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage(img),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Center(
+                  child: Text(
+                    "10:00AM",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16,
+                        color: kFontPrimaryColor),
                   ),
                 ),
               ),
-              SizedBox(
-                width: 16,
-              ),
-              Expanded(
+              Center(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 10,
-                      ),
-                      child: Text(
-                        title,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                            color: kFontPrimaryColor),
+                    Container(
+                      height: 69,
+                      width: 45,
+                      //color: Colors.amber,
+                      //child: SvgPicture.asset("assets/icons/Image 5.svg"),
+                      child: Image.asset(
+                        "assets/logo/Image4.svg",
+                        fit: BoxFit.cover,
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 5),
                       child: Text(
-                        subtitle,
+                        "LA ROCH.",
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 12,
-                            color: kFontSecondTextColor),
+                            color: kFontPrimaryColor),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
+              Text(
+                "VS",
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 16,
+                    color: kFontPrimaryColor),
+              ),
+              Column(
+                children: [
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 69,
+                          width: 60,
+                          //color: Colors.pink,
+                          child: Image.asset(
+                            "assets/logo/Image3.svg",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 5),
+                          child: Text(
+                            "BAYONNE",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 12,
+                                color: kFontPrimaryColor),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
+        ],
+      ),
+    );
+  }
+
+  Container newsCard_2(String img, String title, String subtitle) {
+    return Container(
+      height: 120,
+      decoration: BoxDecoration(
+        color: kBackgroundColor,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(18),
+          topRight: Radius.circular(18),
+          bottomLeft: Radius.circular(18),
+          bottomRight: Radius.circular(18),
         ),
+      ),
+      child: Stack(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Center(
+                  child: Text(
+                    "10:00AM",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16,
+                        color: kFontPrimaryColor),
+                  ),
+                ),
+              ),
+              Center(
+                child: Column(
+                  children: [
+                    Container(
+                      height: 69,
+                      width: 45,
+                      //color: Colors.amber,
+                      //child: SvgPicture.asset("assets/icons/Image 5.svg"),
+                      child: Image.asset(
+                        "assets/logo/Image5.png",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 5),
+                      child: Text(
+                        "AGEN",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
+                            color: kFontPrimaryColor),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Text(
+                "VS",
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 16,
+                    color: kFontPrimaryColor),
+              ),
+              Column(
+                children: [
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 69,
+                          width: 60,
+                          //color: Colors.pink,
+                          child: Image.asset(
+                            "assets/logo/surface1.png",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 5),
+                          child: Text(
+                            "BRIVE",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 12,
+                                color: kFontPrimaryColor),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

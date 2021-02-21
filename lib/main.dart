@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: '/',
         routes: <String, WidgetBuilder>{
-          '/': (context) => CalendarScreen(),
+          '/': (context) => LoginScreen(),
           '/Avartar': (context) => AvartarScreen(),
         });
   }
