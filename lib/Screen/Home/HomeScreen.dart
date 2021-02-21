@@ -11,6 +11,7 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:CABRIVE/Screen/Widgets/NavigationBar.dart';
 import 'package:CABRIVE/Screen/Stadium/StadiumScreen.dart';
+import 'package:CABRIVE/Screen/Promotion/PromotionScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
@@ -542,8 +543,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 color: kFontPrimaryColor)),
                         GestureDetector(
                           onTap: () {
-                            // Navigator.push(
-                            //   context, MaterialPageRoute(builder: (context) => NewsScreen()));
+                            Navigator.push(
+                              context, MaterialPageRoute(builder: (context) => PromotionScreen()));
                           },
                           child: Text("SEE ALL >",
                               style: TextStyle(
