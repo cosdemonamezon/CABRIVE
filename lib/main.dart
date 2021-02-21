@@ -1,3 +1,5 @@
+
+import 'package:CABRIVE/Screen/Home/HomeScreen.dart';
 import 'package:CABRIVE/Screen/Login/LoginScreen.dart';
 import 'package:CABRIVE/Screen/Avartar/AvartarScreen.dart';
 
@@ -29,7 +31,12 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         routes: <String, WidgetBuilder>{
           '/': (context) => LoginScreen(),
+<<<<<<< HEAD
           '/Avartar': (context) => AvartarScreen(),
+=======
+          '/detailnews': (context) => LoginScreen(),
+          '/home': (context) => HomeScreen(),
+>>>>>>> ad739efa8c433d856468a409d9c89e8d29fc45db
         });
   }
 }

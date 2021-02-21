@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 import 'package:CABRIVE/Screen/Chat/ChatScreen.dart';
+=======
+import 'package:CABRIVE/Screen/Profile/ProfileScreen.dart';
+>>>>>>> ad739efa8c433d856468a409d9c89e8d29fc45db
 import 'package:flutter/material.dart';
 import 'package:CABRIVE/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:CABRIVE/Screen/Chat/ChatScreen.dart';
+<<<<<<< HEAD
 import 'package:CABRIVE/Screen/Avartar/AvartarScreenV2.dart';
 import 'package:CABRIVE/Screen/Avartar/SamplePage.dart';
+=======
+import 'package:CABRIVE/Screen/Notification/Notification.dart';
+
+>>>>>>> ad739efa8c433d856468a409d9c89e8d29fc45db
 
 class NavigationBar extends StatefulWidget {
   NavigationBar({Key key}) : super(key: key);
@@ -77,6 +86,7 @@ class _NavigationBarState extends State<NavigationBar> {
                 ],
               ),
             ),
+<<<<<<< HEAD
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Column(
@@ -103,6 +113,44 @@ class _NavigationBarState extends State<NavigationBar> {
                       width: 30,
                       color: kButtonColor),
                 ],
+=======
+            GestureDetector(
+              onTap: (){
+                Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => NotificationScreen()));
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(
+                      "assets/icons/Alert.svg",
+                      fit: BoxFit.cover, height: 30, width: 30, color: kButtonColor
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => ProfileScreen()));
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(
+                      "assets/icons/User.svg",
+                      fit: BoxFit.cover, height: 30, width: 30, color: kButtonColor
+                    ),
+                  ],
+                ),
+>>>>>>> ad739efa8c433d856468a409d9c89e8d29fc45db
               ),
             ),
           ],
