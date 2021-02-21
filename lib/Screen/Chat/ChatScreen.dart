@@ -1,4 +1,5 @@
 import 'package:CABRIVE/Screen/Chat/ChatDetail.dart';
+import 'package:CABRIVE/Screen/Home/HomeScreen.dart';
 import 'package:CABRIVE/Screen/Widgets/NavigationBar.dart';
 import 'package:CABRIVE/constants.dart';
 import 'package:flutter/material.dart';
@@ -32,6 +33,12 @@ class _ChatScreenState extends State<ChatScreen> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios), 
+          onPressed: (){
+            Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => HomeScreen()), (route) => false);
+          }
+        ),
           bottom: TabBar(
             //indicatorColor: Colors.red,
             

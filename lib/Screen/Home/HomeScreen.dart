@@ -1,3 +1,4 @@
+import 'package:CABRIVE/Screen/New/NewsScreen.dart';
 import 'package:CABRIVE/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -141,7 +142,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontWeight: FontWeight.bold,
                                 color: kFontPrimaryColor)),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context, MaterialPageRoute(builder: (context) => NewsScreen()));
+                          },
                           child: Text("SEE ALL >",
                               style: TextStyle(
                                   fontSize: 12,
