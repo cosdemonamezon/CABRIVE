@@ -113,7 +113,6 @@ class _NavigationBarState extends State<NavigationBar> {
                       width: 30,
                       color: kButtonColor),
                 ],
-=======
             GestureDetector(
               onTap: (){
                 Navigator.push(
@@ -150,7 +149,6 @@ class _NavigationBarState extends State<NavigationBar> {
                     ),
                   ],
                 ),
->>>>>>> ad739efa8c433d856468a409d9c89e8d29fc45db
               ),
             ),
           ],
