@@ -1,19 +1,12 @@
-<<<<<<< HEAD
 import 'package:CABRIVE/Screen/Chat/ChatScreen.dart';
-=======
+import 'package:CABRIVE/Screen/Notification/Notification.dart';
 import 'package:CABRIVE/Screen/Profile/ProfileScreen.dart';
->>>>>>> ad739efa8c433d856468a409d9c89e8d29fc45db
 import 'package:flutter/material.dart';
 import 'package:CABRIVE/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:CABRIVE/Screen/Chat/ChatScreen.dart';
-<<<<<<< HEAD
 import 'package:CABRIVE/Screen/Avartar/AvartarScreenV2.dart';
 import 'package:CABRIVE/Screen/Avartar/SamplePage.dart';
-=======
-import 'package:CABRIVE/Screen/Notification/Notification.dart';
-
->>>>>>> ad739efa8c433d856468a409d9c89e8d29fc45db
 
 class NavigationBar extends StatefulWidget {
   NavigationBar({Key key}) : super(key: key);
@@ -86,7 +79,6 @@ class _NavigationBarState extends State<NavigationBar> {
                 ],
               ),
             ),
-<<<<<<< HEAD
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Column(
