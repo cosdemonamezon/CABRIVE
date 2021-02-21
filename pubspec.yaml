@@ -71,10 +71,19 @@ flutter:
     - assets/144482999_3737138806329484_4986658706291405403_o.jpg
     - assets/142130192_3723244804385551_7472341975798282192_o.jpg
     - assets/144241294_3734758989900799_1924641855745037453_o.jpg
+    - assets/131982946_3631407893569243_1613121772109122784_n.jpg
+    - assets/131948114_3624474260929273_4187310378479201958_o.jpg
     - assets/State_of_Origin_Game_II_2018.jpg
     - assets/FIFA_World_Cup_2010_Mexico_VS_South_Africa.jpg
     - assets/Stade_de_Twickenham_à_Londres.jpg
     - assets/StadeFranceNationsLeague2018.jpg
+    - assets/E37_Perth_Stadium_Open_Day_089.jpeg
+    - assets/FIFA_World_Cup_2010_Slovakia_Italy.jpg
+    - assets/Marvel_Stadium_from_an_aerial_perspective._Feb_2019.jpg
+    - assets/Murrayfield_Stadium_2005-05-13.jpg
+    - assets/State_of_Origin_Game_II_2018.jpg
+    - assets/FIFA_World_Cup_2010_Slovakia_Italy.jpg
+    - assets/Murrayfield_Stadium_2005-05-13.jpg
     - assets/images/ironman.jpg
     - assets/images/captain-america.jpg
     - assets/images/hulk.jpg
@@ -84,6 +93,16 @@ flutter:
     - assets/images/thor.png
     - assets/images/captain-marvel.jpg
     - assets/images/nick-fury.jpg
+    - assets/logo/Image5.png
+    - assets/logo/surface1.png
+    - assets/logo/STADE_ROCHELAIS.png
+    - assets/logo/Image3.png
+    - assets/images/Stadium-Art.png
+    - assets/images/seat-blue.png
+    - assets/images/seat-red.png
+    - assets/images/seat-yellow.png
+    - assets/images/Stadium-3.png
+    - assets/images/Stadium-1.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
