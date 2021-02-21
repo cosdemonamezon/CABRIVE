@@ -39,11 +39,6 @@ class AvartarScreen extends StatefulWidget {
 }
 
 class _AvartarScreenState extends State<AvartarScreen> {
-  // final double _initFabHeight = 5.0;
-  // double _fabHeight;
-  // double _panelHeightOpen;
-  // double _panelHeightClosed = 5.0;
-
   final double _initFabHeight = 5.0;
   double _fabHeight;
   double _panelHeightOpen;
@@ -209,13 +204,13 @@ class _AvartarScreenState extends State<AvartarScreen> {
           maxHeight: _panelHeightOpen,
           minHeight: _panelHeightClosed,
           parallaxEnabled: false,
-          isDraggable: true,
+          isDraggable: false,
           parallaxOffset: .5,
           onPanelClosed: () {
             _setLoading(false);
           },
           color: Color(0xff000000),
-          panelBuilder: (sc) => _panel_new(sc),
+          panelBuilder: (sc) => _panel(sc),
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(18.0), topRight: Radius.circular(18.0)),
           onPanelSlide: (double pos) => setState(() {
@@ -227,7 +222,7 @@ class _AvartarScreenState extends State<AvartarScreen> {
     );
   }
 
-  Widget _panel_new(ScrollController sc) {
+  Widget _panel(ScrollController sc) {
     return MediaQuery.removePadding(
       context: context,
       removeTop: true,
@@ -261,11 +256,11 @@ class _AvartarScreenState extends State<AvartarScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    _category_new("Hair", Icons.favorite, Colors.blue, 1),
-                    _category_new("Face", Icons.restaurant, Colors.red, 0),
-                    _category_new("Eye", Icons.event, Colors.amber, 0),
-                    _category_new("Brow", Icons.more_horiz, Colors.green, 0),
-                    _category_new("Nose", Icons.more_horiz, Colors.green, 0),
+                    _category("Hair", Icons.favorite, Colors.blue, 1),
+                    _category("Face", Icons.restaurant, Colors.red, 0),
+                    _category("Eye", Icons.event, Colors.amber, 0),
+                    _category("Brow", Icons.more_horiz, Colors.green, 0),
+                    _category("Nose", Icons.more_horiz, Colors.green, 0),
                   ],
                 ),
               ],
@@ -283,16 +278,15 @@ class _AvartarScreenState extends State<AvartarScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    _button_new(
-                        "Popular", Icons.favorite, Color(0xff000001), 1),
-                    _button_new("Food", Icons.restaurant, Color(0xff464646), 0),
-                    _button_new("Events", Icons.event, Color(0xff341F0A), 0),
-                    _button_new("More", Icons.more_horiz, Color(0xff1B1105), 0),
-                    _button_new("More", Icons.more_horiz, Color(0xff20394F), 0),
-                    _button_new("More", Icons.more_horiz, Color(0xff505E69), 0),
-                    _button_new("More", Icons.more_horiz, Color(0xff461409), 0),
-                    _button_new("More", Icons.more_horiz, Color(0xff61422E), 0),
-                    _button_new("More", Icons.more_horiz, Color(0xff965C5B), 0),
+                    _button("Popular", Icons.favorite, Color(0xff000001), 1),
+                    _button("Food", Icons.restaurant, Color(0xff464646), 0),
+                    _button("Events", Icons.event, Color(0xff341F0A), 0),
+                    _button("More", Icons.more_horiz, Color(0xff1B1105), 0),
+                    _button("More", Icons.more_horiz, Color(0xff20394F), 0),
+                    _button("More", Icons.more_horiz, Color(0xff505E69), 0),
+                    _button("More", Icons.more_horiz, Color(0xff461409), 0),
+                    _button("More", Icons.more_horiz, Color(0xff61422E), 0),
+                    _button("More", Icons.more_horiz, Color(0xff965C5B), 0),
                   ],
                 ),
               ],
@@ -314,76 +308,48 @@ class _AvartarScreenState extends State<AvartarScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-01.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-01.png"),
+                              ),
                             ),
                           ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-02.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-02.png"),
+                              ),
                             ),
                           ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-03.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-03.png"),
+                              ),
                             ),
                           ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-04.png"),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 12.0,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-05.png"),
-                            ),
-                          ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-06.png"),
-                            ),
-                          ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-07.png"),
-                            ),
-                          ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-08.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-04.png"),
+                              ),
                             ),
                           ),
                         ],
@@ -394,36 +360,100 @@ class _AvartarScreenState extends State<AvartarScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-09.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-05.png"),
+                              ),
                             ),
                           ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-10.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-06.png"),
+                              ),
                             ),
                           ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-11.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-07.png"),
+                              ),
                             ),
                           ),
-                          Center(
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              child:
-                                  Image.asset("assets/charactor/face-12.png"),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-08.png"),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 12.0,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-09.png"),
+                              ),
+                            ),
+                          ),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-10.png"),
+                              ),
+                            ),
+                          ),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-11.png"),
+                              ),
+                            ),
+                          ),
+                          Hero(
+                            tag: 'hero',
+                            child: Center(
+                              child: Container(
+                                height: 100,
+                                width: 100,
+                                child:
+                                    Image.asset("assets/charactor/face-12.png"),
+                              ),
                             ),
                           ),
                         ],
@@ -442,7 +472,7 @@ class _AvartarScreenState extends State<AvartarScreen> {
     );
   }
 
-  Widget _panel(ScrollController sc) {
+  Widget _panel2(ScrollController sc) {
     return MediaQuery.removePadding(
         context: context,
         removeTop: true,
@@ -485,10 +515,10 @@ class _AvartarScreenState extends State<AvartarScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                _button("Popular", Icons.favorite, Colors.blue),
-                _button("Food", Icons.restaurant, Colors.red),
-                _button("Events", Icons.event, Colors.amber),
-                _button("More", Icons.more_horiz, Colors.green),
+                _button("Popular", Icons.favorite, Colors.blue, 0),
+                _button("Food", Icons.restaurant, Colors.red, 0),
+                _button("Events", Icons.event, Colors.amber, 0),
+                _button("More", Icons.more_horiz, Colors.green, 0),
               ],
             ),
             SizedBox(
@@ -539,32 +569,7 @@ class _AvartarScreenState extends State<AvartarScreen> {
         ));
   }
 
-  Widget _button(String label, IconData icon, Color color) {
-    return Column(
-      children: <Widget>[
-        Container(
-          padding: const EdgeInsets.all(16.0),
-          child: Icon(
-            icon,
-            color: Colors.white,
-          ),
-          decoration:
-              BoxDecoration(color: color, shape: BoxShape.circle, boxShadow: [
-            BoxShadow(
-              color: Color.fromRGBO(0, 0, 0, 0.15),
-              blurRadius: 8.0,
-            )
-          ]),
-        ),
-        SizedBox(
-          height: 12.0,
-        ),
-        Text(label),
-      ],
-    );
-  }
-
-  Widget _category_new(String label, IconData icon, Color color, int index) {
+  Widget _category(String label, IconData icon, Color color, int index) {
     return Column(
       children: <Widget>[
         FlatButton(
@@ -591,7 +596,7 @@ class _AvartarScreenState extends State<AvartarScreen> {
     );
   }
 
-  Widget _button_new(String label, IconData icon, Color color, int index) {
+  Widget _button(String label, IconData icon, Color color, int index) {
     return Column(
       children: <Widget>[
         Container(

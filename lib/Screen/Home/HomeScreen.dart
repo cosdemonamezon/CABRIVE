@@ -9,6 +9,7 @@ import 'package:CABRIVE/services/ml_vision_service.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:CABRIVE/Screen/Widgets/NavigationBar.dart';
+import 'package:CABRIVE/Screen/Avartar/AvartarScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
@@ -116,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (BuildContext context) => SignUp(
+                            builder: (BuildContext context) => SignIn(
                               cameraDescription: cameraDescription,
                             ),
                           ),

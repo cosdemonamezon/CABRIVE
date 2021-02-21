@@ -1,9 +1,9 @@
 import 'package:CABRIVE/pages/db/database.dart';
-import 'package:CABRIVE/pages/profile.dart';
+import 'package:CABRIVE/Screen/Avartar/AvartarScreen.dart';
+import 'package:CABRIVE/Pages/profile.dart';
 import 'package:CABRIVE/services/facenet.service.dart';
 import 'package:flutter/material.dart';
 import '../home.dart';
-import 'package:CABRIVE/Screen/Avartar/AvartarScreen.dart';
 
 class User {
   String user;
@@ -50,24 +50,22 @@ class _AuthActionButtonState extends State<AuthActionButton> {
     /// resets the face stored in the face net sevice
     this._faceNetService.setPredictedData(null);
     Navigator.push(context,
-        MaterialPageRoute(builder: (BuildContext context) => AvartarScreen()));
+        MaterialPageRoute(builder: (BuildContext context) => MyHomePage()));
   }
 
   Future _signIn(context) async {
     String password = _passwordTextEditingController.text;
 
-    Navigator.push(context,
-        MaterialPageRoute(builder: (BuildContext context) => AvartarScreen()));
-    // if (this.predictedUser.password == password) {
-    //   Navigator.push(
-    //       context,
-    //       MaterialPageRoute(
-    //           builder: (BuildContext context) => Profile(
-    //                 username: this.predictedUser.user,
-    //               )));
-    // } else {
-    //   print(" WRONG PASSWORD!");
-    // }
+    if (this.predictedUser.password == password) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (BuildContext context) => Profile(
+                    username: this.predictedUser.user,
+                  )));
+    } else {
+      print(" WRONG PASSWORD!");
+    }
   }
 
   String _predictUser() {
@@ -83,9 +81,7 @@ class _AuthActionButtonState extends State<AuthActionButton> {
       // Provide an onPressed callback.
       onPressed: () async {
         Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (BuildContext context) => AvartarScreen()));
+            context, MaterialPageRoute(builder: (context) => AvartarScreen()));
         // try {
         //   // Ensure that the camera is initialized.
         //   await widget._initializeControllerFuture;

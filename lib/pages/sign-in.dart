@@ -196,13 +196,11 @@ class SignInState extends State<SignIn> {
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: !_bottomSheetVisible
-          ? AuthActionButton(
-              _initializeControllerFuture,
-              onPressed: onShot,
-              isLogin: true,
-            )
-          : Container(),
+      floatingActionButton: AuthActionButton(
+        _initializeControllerFuture,
+        onPressed: onShot,
+        isLogin: true,
+      ),
     );
   }
 }
