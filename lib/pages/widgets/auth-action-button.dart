@@ -56,16 +56,18 @@ class _AuthActionButtonState extends State<AuthActionButton> {
   Future _signIn(context) async {
     String password = _passwordTextEditingController.text;
 
-    if (this.predictedUser.password == password) {
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (BuildContext context) => Profile(
-                    username: this.predictedUser.user,
-                  )));
-    } else {
-      print(" WRONG PASSWORD!");
-    }
+    Navigator.push(context,
+        MaterialPageRoute(builder: (BuildContext context) => AvartarScreen()));
+    // if (this.predictedUser.password == password) {
+    //   Navigator.push(
+    //       context,
+    //       MaterialPageRoute(
+    //           builder: (BuildContext context) => Profile(
+    //                 username: this.predictedUser.user,
+    //               )));
+    // } else {
+    //   print(" WRONG PASSWORD!");
+    // }
   }
 
   String _predictUser() {
@@ -80,26 +82,30 @@ class _AuthActionButtonState extends State<AuthActionButton> {
       // icon: Icon(Icons.camera_alt),
       // Provide an onPressed callback.
       onPressed: () async {
-        try {
-          // Ensure that the camera is initialized.
-          await widget._initializeControllerFuture;
-          // onShot event (takes the image and predict output)
-          bool faceDetected = await widget.onPressed();
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (BuildContext context) => AvartarScreen()));
+        // try {
+        //   // Ensure that the camera is initialized.
+        //   await widget._initializeControllerFuture;
+        //   // onShot event (takes the image and predict output)
+        //   bool faceDetected = await widget.onPressed();
 
-          if (faceDetected) {
-            if (widget.isLogin) {
-              var userAndPass = _predictUser();
-              if (userAndPass != null) {
-                this.predictedUser = User.fromDB(userAndPass);
-              }
-            }
-            Scaffold.of(context)
-                .showBottomSheet((context) => signSheet(context));
-          }
-        } catch (e) {
-          // If an error occurs, log the error to the console.
-          print(e);
-        }
+        //   if (faceDetected) {
+        //     if (widget.isLogin) {
+        //       var userAndPass = _predictUser();
+        //       if (userAndPass != null) {
+        //         this.predictedUser = User.fromDB(userAndPass);
+        //       }
+        //     }
+        //     Scaffold.of(context)
+        //         .showBottomSheet((context) => signSheet(context));
+        //   }
+        // } catch (e) {
+        //   // If an error occurs, log the error to the console.
+        //   print(e);
+        // }
       },
     );
   }
