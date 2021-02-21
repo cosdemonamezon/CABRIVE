@@ -1,3 +1,4 @@
+import 'package:CABRIVE/Screen/Home/HomeScreen.dart';
 import 'package:CABRIVE/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -75,7 +76,7 @@ alertdialog (String title, String subtitle, String secoundtitle, String img, con
                       showDialog(
                         barrierDismissible: false,
                         context: context,
-                        builder: (context) => alertdialog(
+                        builder: (context) => faceScandialog(
                           touchID,
                           subTouchID,
                           secoundTouchID,
@@ -84,7 +85,7 @@ alertdialog (String title, String subtitle, String secoundtitle, String img, con
                         ),
                       );
                       // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context) => SetPin()));
+                      //   context, MaterialPageRoute(builder: (context) => HomeScreen()));
                     },
                     child: Text(
                       "USE TOUCH ID",
@@ -185,8 +186,8 @@ faceScandialog (String title, String subtitle, String secoundtitle, String img, 
                   ),
                   child: FlatButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context, MaterialPageRoute(builder: (context) => SetPin()));
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => HomeScreen()));
                     },
                     child: Text(
                       "USE TOUCH ID",

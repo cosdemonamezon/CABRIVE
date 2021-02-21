@@ -13,4 +13,5 @@ const kButtonColor = Color(0xffe3d6b3);
 const kTextButtonColor = Color(0xff1c1c1c);
 const kInputSearchColor = Color(0xff333333);
 const kCicleColor = Color(0xffd6c28d);
+const kContainer = Color(0xffb28e2c);
 

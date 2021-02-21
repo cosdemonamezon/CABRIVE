@@ -103,6 +103,9 @@ flutter:
     - assets/images/seat-yellow.png
     - assets/images/Stadium-3.png
     - assets/images/Stadium-1.png
+    - assets/icons/wallet-01.png
+    - assets/icons/mastercard-01.png
+    - assets/icons/visa-01.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
