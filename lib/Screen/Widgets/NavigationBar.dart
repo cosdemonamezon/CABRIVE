@@ -105,10 +105,14 @@ class _NavigationBarState extends State<NavigationBar> {
                       width: 30,
                       color: kButtonColor),
                 ],
+              ),
+            ),
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => NotificationScreen()));
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => NotificationScreen()));
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -116,18 +120,19 @@ class _NavigationBarState extends State<NavigationBar> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SvgPicture.asset(
-                      "assets/icons/Alert.svg",
-                      fit: BoxFit.cover, height: 30, width: 30, color: kButtonColor
-                    ),
+                    SvgPicture.asset("assets/icons/Alert.svg",
+                        fit: BoxFit.cover,
+                        height: 30,
+                        width: 30,
+                        color: kButtonColor),
                   ],
                 ),
               ),
             ),
             GestureDetector(
-              onTap: (){
-                Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => ProfileScreen()));
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ProfileScreen()));
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -135,10 +140,11 @@ class _NavigationBarState extends State<NavigationBar> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SvgPicture.asset(
-                      "assets/icons/User.svg",
-                      fit: BoxFit.cover, height: 30, width: 30, color: kButtonColor
-                    ),
+                    SvgPicture.asset("assets/icons/User.svg",
+                        fit: BoxFit.cover,
+                        height: 30,
+                        width: 30,
+                        color: kButtonColor),
                   ],
                 ),
               ),
