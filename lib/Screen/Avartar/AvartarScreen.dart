@@ -307,48 +307,36 @@ class _AvartarScreenState extends State<AvartarScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Hero(
-                            tag: 'hero',
-                            child: Center(
-                              child: Container(
-                                height: 100,
-                                width: 100,
-                                child:
-                                    Image.asset("assets/charactor/face-01.png"),
-                              ),
+                          Center(
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child:
+                                  Image.asset("assets/charactor/face-01.png"),
                             ),
                           ),
-                          Hero(
-                            tag: 'hero',
-                            child: Center(
-                              child: Container(
-                                height: 100,
-                                width: 100,
-                                child:
-                                    Image.asset("assets/charactor/face-02.png"),
-                              ),
+                          Center(
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child:
+                                  Image.asset("assets/charactor/face-02.png"),
                             ),
                           ),
-                          Hero(
-                            tag: 'hero',
-                            child: Center(
-                              child: Container(
-                                height: 100,
-                                width: 100,
-                                child:
-                                    Image.asset("assets/charactor/face-03.png"),
-                              ),
+                          Center(
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child:
+                                  Image.asset("assets/charactor/face-03.png"),
                             ),
                           ),
-                          Hero(
-                            tag: 'hero',
-                            child: Center(
-                              child: Container(
-                                height: 100,
-                                width: 100,
-                                child:
-                                    Image.asset("assets/charactor/face-04.png"),
-                              ),
+                          Center(
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child:
+                                  Image.asset("assets/charactor/face-04.png"),
                             ),
                           ),
                         ],
@@ -359,48 +347,36 @@ class _AvartarScreenState extends State<AvartarScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Hero(
-                            tag: 'hero',
-                            child: Center(
-                              child: Container(
-                                height: 100,
-                                width: 100,
-                                child:
-                                    Image.asset("assets/charactor/face-05.png"),
-                              ),
+                          Center(
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child:
+                                  Image.asset("assets/charactor/face-05.png"),
                             ),
                           ),
-                          Hero(
-                            tag: 'hero',
-                            child: Center(
-                              child: Container(
-                                height: 100,
-                                width: 100,
-                                child:
-                                    Image.asset("assets/charactor/face-06.png"),
-                              ),
+                          Center(
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child:
+                                  Image.asset("assets/charactor/face-06.png"),
                             ),
                           ),
-                          Hero(
-                            tag: 'hero',
-                            child: Center(
-                              child: Container(
-                                height: 100,
-                                width: 100,
-                                child:
-                                    Image.asset("assets/charactor/face-07.png"),
-                              ),
+                          Center(
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child:
+                                  Image.asset("assets/charactor/face-07.png"),
                             ),
                           ),
-                          Hero(
-                            tag: 'hero',
-                            child: Center(
-                              child: Container(
-                                height: 100,
-                                width: 100,
-                                child:
-                                    Image.asset("assets/charactor/face-08.png"),
-                              ),
+                          Center(
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child:
+                                  Image.asset("assets/charactor/face-08.png"),
                             ),
                           ),
                         ],
@@ -411,48 +387,36 @@ class _AvartarScreenState extends State<AvartarScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Hero(
-                            tag: 'hero',
-                            child: Center(
-                              child: Container(
-                                height: 100,
-                                width: 100,
-                                child:
-                                    Image.asset("assets/charactor/face-09.png"),
-                              ),
+                          Center(
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child:
+                                  Image.asset("assets/charactor/face-09.png"),
                             ),
                           ),
-                          Hero(
-                            tag: 'hero',
-                            child: Center(
-                              child: Container(
-                                height: 100,
-                                width: 100,
-                                child:
-                                    Image.asset("assets/charactor/face-10.png"),
-                              ),
+                          Center(
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child:
+                                  Image.asset("assets/charactor/face-10.png"),
                             ),
                           ),
-                          Hero(
-                            tag: 'hero',
-                            child: Center(
-                              child: Container(
-                                height: 100,
-                                width: 100,
-                                child:
-                                    Image.asset("assets/charactor/face-11.png"),
-                              ),
+                          Center(
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child:
+                                  Image.asset("assets/charactor/face-11.png"),
                             ),
                           ),
-                          Hero(
-                            tag: 'hero',
-                            child: Center(
-                              child: Container(
-                                height: 100,
-                                width: 100,
-                                child:
-                                    Image.asset("assets/charactor/face-12.png"),
-                              ),
+                          Center(
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child:
+                                  Image.asset("assets/charactor/face-12.png"),
                             ),
                           ),
                         ],

@@ -374,12 +374,13 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 child: Column(
                   children: [
                     Container(
-                      height: 69,
-                      width: 45,
+                      height: 59,
+                      width: 59,
+                      margin: const EdgeInsets.only(top: 20),
                       //color: Colors.amber,
                       //child: SvgPicture.asset("assets/icons/Image 5.svg"),
                       child: Image.asset(
-                        "assets/logo/Image4.svg",
+                        "assets/logo/Image5.png",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -411,11 +412,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
                     child: Column(
                       children: [
                         Container(
-                          height: 69,
-                          width: 60,
-                          //color: Colors.pink,
+                          height: 49,
+                          width: 49,
+                          margin: const EdgeInsets.only(top: 20),
                           child: Image.asset(
-                            "assets/logo/Image3.svg",
+                            "assets/logo/surface1.png",
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -474,12 +475,12 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 child: Column(
                   children: [
                     Container(
-                      height: 69,
-                      width: 45,
+                      height: 49,
+                      width: 49,
                       //color: Colors.amber,
-                      //child: SvgPicture.asset("assets/icons/Image 5.svg"),
+                      margin: const EdgeInsets.only(top: 25),
                       child: Image.asset(
-                        "assets/logo/Image5.png",
+                        "assets/logo/STADE_ROCHELAIS.png",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -511,11 +512,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
                     child: Column(
                       children: [
                         Container(
-                          height: 69,
-                          width: 60,
-                          //color: Colors.pink,
+                          height: 59,
+                          width: 59,
+                          margin: const EdgeInsets.only(top: 20),
                           child: Image.asset(
-                            "assets/logo/surface1.png",
+                            "assets/logo/Image3.png",
                             fit: BoxFit.cover,
                           ),
                         ),

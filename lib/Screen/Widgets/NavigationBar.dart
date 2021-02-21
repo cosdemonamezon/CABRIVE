@@ -111,10 +111,10 @@ class _NavigationBarState extends State<NavigationBar> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SvgPicture.asset("assets/icons/User.svg",
+                  Image.asset("assets/icons/User.png",
                       fit: BoxFit.cover,
-                      height: 30,
-                      width: 30,
+                      height: 33,
+                      width: 33,
                       color: Colors.white),
                 ],
               ),

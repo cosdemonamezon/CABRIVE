@@ -146,7 +146,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         GestureDetector(
                           onTap: () {
                             Navigator.push(
-                              context, MaterialPageRoute(builder: (context) => NewsScreen()));
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => NewsScreen()));
                           },
                           child: Text("SEE ALL >",
                               style: TextStyle(
@@ -347,7 +349,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         GestureDetector(
                           onTap: () {
                             Navigator.push(
-                              context, MaterialPageRoute(builder: (context) => StadiumScreen()));
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => StadiumScreen()));
                           },
                           child: Text("SEE ALL >",
                               style: TextStyle(
@@ -489,7 +493,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Container(
                     padding: EdgeInsets.symmetric(
                       horizontal: 20,
@@ -516,16 +522,32 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Container(
-                      height: 140,
-                      color: Colors.blue,
+                      height: 150,
+                      width: double.infinity,
+                      //color: Colors.green,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(18),
+                          topRight: Radius.circular(18),
+                          bottomLeft: Radius.circular(18),
+                          bottomRight: Radius.circular(18),
+                        ),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage("assets/1613913478226.jpg"),
+                        ),
+                      ),
                     ),
                   ),
-                  SizedBox(height: 20,),
-                  
+                  SizedBox(
+                    height: 20,
+                  ),
                   SizedBox(
                     height: 10,
                   ),
@@ -544,7 +566,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         GestureDetector(
                           onTap: () {
                             Navigator.push(
-                              context, MaterialPageRoute(builder: (context) => PromotionScreen()));
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PromotionScreen()));
                           },
                           child: Text("SEE ALL >",
                               style: TextStyle(
@@ -592,10 +616,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
-                                    children: [
-                                      
-                                      
-                                    ],
+                                    children: [],
                                   ),
                                 ),
                               ),
@@ -607,10 +628,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                   children: [
                                     ClipRRect(
                                       borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(18),
-                                          topRight: Radius.circular(18),
-                                          bottomLeft: Radius.circular(18),
-                                          bottomRight: Radius.circular(18),
+                                        topLeft: Radius.circular(18),
+                                        topRight: Radius.circular(18),
+                                        bottomLeft: Radius.circular(18),
+                                        bottomRight: Radius.circular(18),
                                       ),
                                       child: Image.asset(
                                         "assets/131982946_3631407893569243_1613121772109122784_n.jpg",
@@ -650,7 +671,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                       bottomRight: Radius.circular(18),
                                     ),
                                   ),
-                                  
                                 ),
                               ),
                               Container(
@@ -661,11 +681,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   children: [
                                     ClipRRect(
                                       borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(18),
-                                          topRight: Radius.circular(18),
-                                          bottomLeft: Radius.circular(18),
-                                          bottomRight: Radius.circular(18),
-                                      ),                                          
+                                        topLeft: Radius.circular(18),
+                                        topRight: Radius.circular(18),
+                                        bottomLeft: Radius.circular(18),
+                                        bottomRight: Radius.circular(18),
+                                      ),
                                       child: Image.asset(
                                         "assets/131948114_3624474260929273_4187310378479201958_o.jpg",
                                         width: 277,
@@ -682,7 +702,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 30,),
+                  SizedBox(
+                    height: 30,
+                  ),
                 ],
               ),
             ],
