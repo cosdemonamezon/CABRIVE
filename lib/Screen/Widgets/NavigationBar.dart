@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:CABRIVE/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:CABRIVE/Screen/Chat/ChatScreen.dart';
-import 'package:CABRIVE/Screen/Avartar/AvartarScreenV2.dart';
+import 'package:CABRIVE/Screen/Avartar/AvartarScreen.dart';
 
 class NavigationBar extends StatefulWidget {
   NavigationBar({Key key}) : super(key: key);
