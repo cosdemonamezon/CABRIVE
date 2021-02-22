@@ -19,7 +19,6 @@ class _ProfileSettingState extends State<ProfileSetting> {
       appBar: AppBar(
         centerTitle: true,
         title: Text("SETTING"),
-        
       ),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 20),
@@ -32,100 +31,126 @@ class _ProfileSettingState extends State<ProfileSetting> {
               color: kBackgroundColor,
               //margin: const EdgeInsets.fromLTRB(32.0, 8.0, 32.0, 16.0),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0)),
-                child: Column(
-                  children: [
-                    ListTile(
-                      title: Text("Edit Profile"),
-                      trailing: Icon(Icons.keyboard_arrow_right),
-                    ),
-                    ListTile(
-                      title: Text("Change Avatar"),
-                      trailing: Icon(Icons.keyboard_arrow_right),
-                      onTap: () {
-                            //open change password
-                      },
-                    ),
-                    SwitchListTile(
-                      activeColor: Colors.purple,
-                      contentPadding: const EdgeInsets.all(0),
-                      value: listSwith,
-                      title: Text("Send me marketing emails"),
-                      onChanged: (val) {
-                        setState(() {
-                          listSwith = true;
-                        });
-                      },
-                    ),
-                    SwitchListTile(
-                    activeColor: Colors.purple,
+                  borderRadius: BorderRadius.circular(10.0)),
+              child: Column(
+                children: [
+                  ListTile(
+                    title: Text("Edit Profile",
+                        style: TextStyle(color: Colors.white)),
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                  ),
+                  ListTile(
+                    title: Text("Change Avatar",
+                        style: TextStyle(color: Colors.white)),
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                    onTap: () {
+                      //open change password
+                    },
+                  ),
+                  SwitchListTile(
+                    activeColor: kButtonColor,
                     contentPadding: const EdgeInsets.all(0),
                     value: listSwith,
-                    title: Text("Enable notification"),
+                    title: Text("Send me marketing emails",
+                        style: TextStyle(color: Colors.white)),
                     onChanged: (val) {
                       setState(() {
-                          listSwith = true;
-                        });
+                        listSwith = true;
+                      });
                     },
                   ),
                   SwitchListTile(
-                    activeColor: Colors.purple,
+                    activeColor: kButtonColor,
                     contentPadding: const EdgeInsets.all(0),
                     value: listSwith,
-                    title: Text("Remind me to rate this app"),
-                    onChanged: (val){
-                      setState(() {
-                          listSwith = true;
-                        });
-                    },
-                  ),
-                  SwitchListTile(
-                    activeColor: Colors.purple,
-                    contentPadding: const EdgeInsets.all(0),
-                    value: listSwith,
-                    title: Text("Background song refresh"),
+                    title: Text("Enable notification",
+                        style: TextStyle(color: Colors.white)),
                     onChanged: (val) {
                       setState(() {
-                          listSwith = true;
-                        });
+                        listSwith = true;
+                      });
                     },
                   ),
                   SwitchListTile(
-                    activeColor: Colors.purple,
+                    activeColor: kButtonColor,
                     contentPadding: const EdgeInsets.all(0),
                     value: listSwith,
-                    title: Text("Recommend me songs based onmy location"),
-                    onChanged: (val){},
+                    title: Text("Remind me to rate this app",
+                        style: TextStyle(color: Colors.white)),
+                    onChanged: (val) {
+                      setState(() {
+                        listSwith = true;
+                      });
+                    },
                   ),
-                   SwitchListTile(
-                    activeColor: Colors.purple,
+                  SwitchListTile(
+                    activeColor: kButtonColor,
                     contentPadding: const EdgeInsets.all(0),
                     value: listSwith,
-                    title: Text("Auto-transition playback to cast devices"),
-                    onChanged: null,
+                    title: Text("Background song refresh",
+                        style: TextStyle(color: Colors.white)),
+                    onChanged: (val) {
+                      setState(() {
+                        listSwith = true;
+                      });
+                    },
                   ),
-                   SwitchListTile(
-                    activeColor: Colors.purple,
+                  SwitchListTile(
+                    activeColor: kButtonColor,
                     contentPadding: const EdgeInsets.all(0),
                     value: listSwith,
-                    title: Text("Find friends from my contact list"),
-                    onChanged: null,
+                    title: Text("Recommend me songs based onmy location",
+                        style: TextStyle(color: Colors.white)),
+                    onChanged: (val) {
+                      setState(() {
+                        listSwith = true;
+                      });
+                    },
                   ),
-
+                  SwitchListTile(
+                    activeColor: kButtonColor,
+                    contentPadding: const EdgeInsets.all(0),
+                    value: listSwith,
+                    title: Text("Auto-transition playback to cast devices",
+                        style: TextStyle(color: Colors.white)),
+                    onChanged: (val) {
+                      setState(() {
+                        listSwith = true;
+                      });
+                    },
+                  ),
+                  SwitchListTile(
+                    activeColor: kButtonColor,
+                    contentPadding: const EdgeInsets.all(0),
+                    value: listSwith,
+                    title: Text("Find friends from my contact list",
+                        style: TextStyle(color: Colors.white)),
+                    onChanged: (val) {
+                      setState(() {
+                        listSwith = true;
+                      });
+                    },
+                  ),
                   const SizedBox(height: 60.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
-                        "Logout",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w400, fontSize: 18, color: kFontPrimaryColor
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, "/");
+                        },
+                        child: Text(
+                          "Logout",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 18,
+                              color: kFontPrimaryColor),
                         ),
                       ),
                     ],
                   )
-                  ],
-                ),
+                ],
+              ),
             ),
           ],
         ),

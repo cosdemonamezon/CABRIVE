@@ -3,7 +3,7 @@ import 'package:CABRIVE/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:CABRIVE/Screen/New/DetailNews.dart';
-
+import 'package:CABRIVE/Screen/Stadium/buyticket.dart';
 import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart'
     show CalendarCarousel;
 import 'package:flutter_calendar_carousel/classes/event.dart';
@@ -456,86 +456,92 @@ class _CalendarScreenState extends State<CalendarScreen> {
       ),
       child: Stack(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Center(
-                  child: Text(
-                    "10:00AM",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16,
-                        color: kFontPrimaryColor),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Buyticket()));
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Center(
+                    child: Text(
+                      "10:00AM",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                          color: kFontPrimaryColor),
+                    ),
                   ),
                 ),
-              ),
-              Center(
-                child: Column(
-                  children: [
-                    Container(
-                      height: 49,
-                      width: 49,
-                      //color: Colors.amber,
-                      margin: const EdgeInsets.only(top: 25),
-                      child: Image.asset(
-                        "assets/logo/STADE_ROCHELAIS.png",
-                        fit: BoxFit.cover,
+                Center(
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 49,
+                        width: 49,
+                        //color: Colors.amber,
+                        margin: const EdgeInsets.only(top: 25),
+                        child: Image.asset(
+                          "assets/logo/STADE_ROCHELAIS.png",
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                    ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 5),
+                        child: Text(
+                          "AGEN",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 12,
+                              color: kFontPrimaryColor),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Text(
+                  "VS",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                      color: kFontPrimaryColor),
+                ),
+                Column(
+                  children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 5),
-                      child: Text(
-                        "AGEN",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                            color: kFontPrimaryColor),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 7),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 59,
+                            width: 59,
+                            margin: const EdgeInsets.only(top: 20),
+                            child: Image.asset(
+                              "assets/logo/Image3.png",
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 5),
+                            child: Text(
+                              "BRIVE",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 12,
+                                  color: kFontPrimaryColor),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 ),
-              ),
-              Text(
-                "VS",
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 16,
-                    color: kFontPrimaryColor),
-              ),
-              Column(
-                children: [
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 59,
-                          width: 59,
-                          margin: const EdgeInsets.only(top: 20),
-                          child: Image.asset(
-                            "assets/logo/Image3.png",
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 5),
-                          child: Text(
-                            "BRIVE",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 12,
-                                color: kFontPrimaryColor),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
