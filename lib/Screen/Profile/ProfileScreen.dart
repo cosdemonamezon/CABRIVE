@@ -22,13 +22,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
         title: Text("Profile"),
         actions: [
           IconButton(
-            iconSize: 32,
-            icon: Icon(Icons.settings), 
-            onPressed: (){
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => ProfileSetting()));
-            }
-          ),
+              iconSize: 32,
+              icon: Icon(Icons.settings),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ProfileSetting()));
+              }),
         ],
       ),
       body: SingleChildScrollView(
@@ -46,18 +45,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       //color: Colors.red,
                       child: Column(
                         children: [
-                          SizedBox(height: 20,),
+                          SizedBox(
+                            height: 20,
+                          ),
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 5),
                             child: Row(
                               children: [
-                                Icon(Icons.person, size: 25, color: kIconColor,),
-                                SizedBox(width: 8,),
+                                Icon(
+                                  Icons.person,
+                                  size: 25,
+                                  color: kIconColor,
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
                                 Text(
                                   "Peeraphat Chatchavalhansa",
                                   style: TextStyle(
-                                    fontWeight: FontWeight.w400, fontSize: 16, color: kFontPrimaryColor
-                                  ),
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 16,
+                                      color: kFontPrimaryColor),
                                 ),
                               ],
                             ),
@@ -66,28 +74,44 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             padding: const EdgeInsets.symmetric(vertical: 5),
                             child: Row(
                               children: [
-                                Icon(Icons.phone_android, size: 25, color: kIconColor,),
-                                SizedBox(width: 8,),
+                                Icon(
+                                  Icons.phone_android,
+                                  size: 25,
+                                  color: kIconColor,
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
                                 Text(
                                   "(443)763-7696",
                                   style: TextStyle(
-                                    fontWeight: FontWeight.w400, fontSize: 16, color: kFontPrimaryColor
-                                  ),
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 16,
+                                      color: kFontPrimaryColor),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 5,),
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 5,
+                            ),
                             child: Row(
                               children: [
-                                Icon(Icons.email, size: 25, color: kIconColor,),
-                                SizedBox(width: 8,),
+                                Icon(
+                                  Icons.email,
+                                  size: 25,
+                                  color: kIconColor,
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
                                 Text(
                                   "roy.hayes@mail.com",
                                   style: TextStyle(
-                                    fontWeight: FontWeight.w400, fontSize: 16, color: kFontPrimaryColor
-                                  ),
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 16,
+                                      color: kFontPrimaryColor),
                                 ),
                               ],
                             ),
@@ -115,16 +139,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                         child: Column(
                           children: [
-                            SizedBox(height: 20,),
+                            SizedBox(
+                              height: 20,
+                            ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 35),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 35),
                               child: Row(
                                 children: [
                                   Text(
                                     "My Wallet",
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w400, fontSize: 14, color: kFontSecondTextColor
-                                    ),
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 14,
+                                        color: kFontSecondTextColor),
                                   ),
                                 ],
                               ),
@@ -140,12 +168,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     Text(
                                       "3,190.00",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold, fontSize: 30, color: kCicleColor
-                                        ),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 30,
+                                          color: kCicleColor),
                                     ),
                                   ],
                                 ),
-                                SizedBox(width: 5,),
+                                SizedBox(
+                                  width: 5,
+                                ),
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -153,8 +184,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     Text(
                                       "USD",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w400, fontSize: 14, color: kCicleColor
-                                        ),
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 14,
+                                          color: kCicleColor),
                                     ),
                                   ],
                                 ),
@@ -175,16 +207,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         child: Image.asset("assets/images/Men-shirt-white.png"),
                       ),
                     ),
-                    
                   ],
                 ),
-                
               ),
               //Text("data"),
-               Padding(
-                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                 child: Row(
-                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       height: size.height * 0.08,
@@ -203,11 +233,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           children: [
                             SvgPicture.asset("assets/icons/Top-up.svg"),
                             //Image.asset("assets/icons/wallet-01.png"),
-                            SizedBox(width: 5,),
-                            Text(
-                              "Top-up",
-                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: kTextButtonColor)
+                            SizedBox(
+                              width: 5,
                             ),
+                            Text("Top-up",
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: kTextButtonColor)),
                           ],
                         ),
                       ),
@@ -229,11 +262,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           children: [
                             SvgPicture.asset("assets/icons/Top-up.svg"),
                             //Image.asset("assets/icons/wallet-01.png"),
-                            SizedBox(width: 5,),
-                            Text(
-                              "Withdraw",
-                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: kTextButtonColor)
+                            SizedBox(
+                              width: 5,
                             ),
+                            Text("Withdraw",
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: kTextButtonColor)),
                           ],
                         ),
                       ),
@@ -241,7 +277,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 40,),
+              SizedBox(
+                height: 40,
+              ),
               Align(
                 alignment: Alignment(0.2, 0.6),
                 child: Container(
@@ -253,18 +291,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(18),
                       topRight: Radius.circular(18),
-                      
                     ),
                   ),
                   child: Column(
                     children: [
                       Center(
-                        child: Text(
-                          "History",
-                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
-                        ),
+                        child: Text("History",
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                color: kFontPrimaryColor)),
                       ),
-                      SizedBox(height: 40,),
+                      SizedBox(
+                        height: 40,
+                      ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Row(
@@ -274,28 +314,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text(
-                                  "Top-up to Wallet",
-                                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
-                                ),
-                                Text(
-                                  "23-01-2021 00:31",
-                                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
-                                ),
+                                Text("Top-up to Wallet",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400,
+                                        color: kFontPrimaryColor)),
+                                Text("23-01-2021 00:31",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400,
+                                        color: kFontPrimaryColor)),
                               ],
                             ),
                             Column(
                               children: [
                                 Row(
                                   children: [
-                                    Text(
-                                      "+3000.00",
-                                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
+                                    Text("+3000.00",
+                                        style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w400,
+                                            color: kFontPrimaryColor)),
+                                    SizedBox(
+                                      width: 5,
                                     ),
-                                    SizedBox(width: 5,),
-                                    Text(
-                                      "USD", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
-                                    ),
+                                    Text("USD",
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w400,
+                                            color: kFontPrimaryColor)),
                                   ],
                                 )
                               ],
@@ -306,10 +353,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Center(
-                          child: Divider(color: kInputSearchColor, height: 10, thickness: 4,),
+                          child: Divider(
+                            color: kInputSearchColor,
+                            height: 10,
+                            thickness: 4,
+                          ),
                         ),
                       ),
-                      SizedBox(height: 30,),
+                      SizedBox(
+                        height: 30,
+                      ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Row(
@@ -319,28 +372,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text(
-                                  "Withdrawal",
-                                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
-                                ),
-                                Text(
-                                  "23-01-2021 00:31",
-                                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
-                                ),
+                                Text("Withdrawal",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400,
+                                        color: kFontPrimaryColor)),
+                                Text("23-01-2021 00:31",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400,
+                                        color: kFontPrimaryColor)),
                               ],
                             ),
                             Column(
                               children: [
                                 Row(
                                   children: [
-                                    Text(
-                                      "-200.00",
-                                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
+                                    Text("-200.00",
+                                        style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w400,
+                                            color: kFontPrimaryColor)),
+                                    SizedBox(
+                                      width: 5,
                                     ),
-                                    SizedBox(width: 5,),
-                                    Text(
-                                      "USD", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
-                                    ),
+                                    Text("USD",
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w400,
+                                            color: kFontPrimaryColor)),
                                   ],
                                 )
                               ],
@@ -351,11 +411,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Center(
-                          child: Divider(color: kInputSearchColor, height: 10, thickness: 4,),
+                          child: Divider(
+                            color: kInputSearchColor,
+                            height: 10,
+                            thickness: 4,
+                          ),
                         ),
                       ),
-
-                      SizedBox(height: 30,),
+                      SizedBox(
+                        height: 30,
+                      ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Row(
@@ -365,28 +430,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text(
-                                  "Buy Seat",
-                                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
-                                ),
-                                Text(
-                                  "23-01-2021 00:31",
-                                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
-                                ),
+                                Text("Buy Seat",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400,
+                                        color: kFontPrimaryColor)),
+                                Text("23-01-2021 00:31",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400,
+                                        color: kFontPrimaryColor)),
                               ],
                             ),
                             Column(
                               children: [
                                 Row(
                                   children: [
-                                    Text(
-                                      "-200.00",
-                                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
+                                    Text("-200.00",
+                                        style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w400,
+                                            color: kFontPrimaryColor)),
+                                    SizedBox(
+                                      width: 5,
                                     ),
-                                    SizedBox(width: 5,),
-                                    Text(
-                                      "USD", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
-                                    ),
+                                    Text("USD",
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w400,
+                                            color: kFontPrimaryColor)),
                                   ],
                                 )
                               ],
@@ -397,11 +469,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Center(
-                          child: Divider(color: kInputSearchColor, height: 10, thickness: 4,),
+                          child: Divider(
+                            color: kInputSearchColor,
+                            height: 10,
+                            thickness: 4,
+                          ),
                         ),
                       ),
-
-                      SizedBox(height: 30,),
+                      SizedBox(
+                        height: 30,
+                      ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Row(
@@ -411,28 +488,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text(
-                                  "Top-up to Wallet",
-                                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
-                                ),
-                                Text(
-                                  "23-01-2021 00:31",
-                                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
-                                ),
+                                Text("Top-up to Wallet",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400,
+                                        color: kFontPrimaryColor)),
+                                Text("23-01-2021 00:31",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400,
+                                        color: kFontPrimaryColor)),
                               ],
                             ),
                             Column(
                               children: [
                                 Row(
                                   children: [
-                                    Text(
-                                      "-420.00",
-                                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
+                                    Text("-420.00",
+                                        style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w400,
+                                            color: kFontPrimaryColor)),
+                                    SizedBox(
+                                      width: 5,
                                     ),
-                                    SizedBox(width: 5,),
-                                    Text(
-                                      "USD", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: kFontPrimaryColor)
-                                    ),
+                                    Text("USD",
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w400,
+                                            color: kFontPrimaryColor)),
                                   ],
                                 )
                               ],
@@ -443,7 +527,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Center(
-                          child: Divider(color: kInputSearchColor, height: 10, thickness: 4,),
+                          child: Divider(
+                            color: kInputSearchColor,
+                            height: 10,
+                            thickness: 4,
+                          ),
                         ),
                       ),
                     ],
@@ -454,7 +542,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: NavigationBar(),
+      bottomNavigationBar: NavigationBar(title: "profile"),
     );
   }
 }

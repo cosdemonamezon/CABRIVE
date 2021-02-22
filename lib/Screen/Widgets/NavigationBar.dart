@@ -10,7 +10,8 @@ import 'package:CABRIVE/Screen/Avartar/AvartarScreen.dart';
 import 'package:CABRIVE/Screen/Home/HomeScreen.dart';
 
 class NavigationBar extends StatefulWidget {
-  NavigationBar({Key key}) : super(key: key);
+  NavigationBar({Key key, this.title}) : super(key: key);
+  final String title;
 
   @override
   _NavigationBarState createState() => _NavigationBarState();
@@ -47,7 +48,9 @@ class _NavigationBarState extends State<NavigationBar> {
                         fit: BoxFit.cover,
                         height: 30,
                         width: 30,
-                        color: Colors.white),
+                        color: widget.title == "home"
+                            ? kButtonColor
+                            : Colors.white),
                   ],
                 ),
               ),
@@ -67,7 +70,9 @@ class _NavigationBarState extends State<NavigationBar> {
                         fit: BoxFit.cover,
                         height: 30,
                         width: 30,
-                        color: Colors.white),
+                        color: widget.title == "chat"
+                            ? kButtonColor
+                            : Colors.white),
                   ],
                 ),
               ),
@@ -87,7 +92,9 @@ class _NavigationBarState extends State<NavigationBar> {
                         fit: BoxFit.cover,
                         height: 30,
                         width: 30,
-                        color: Colors.white),
+                        color: widget.title == "calendar"
+                            ? kButtonColor
+                            : Colors.white),
                   ],
                 ),
               ),
@@ -109,7 +116,9 @@ class _NavigationBarState extends State<NavigationBar> {
                         fit: BoxFit.cover,
                         height: 30,
                         width: 30,
-                        color: Colors.white),
+                        color: widget.title == "notification"
+                            ? kButtonColor
+                            : Colors.white),
                   ],
                 ),
               ),
@@ -129,7 +138,9 @@ class _NavigationBarState extends State<NavigationBar> {
                         fit: BoxFit.cover,
                         height: 33,
                         width: 33,
-                        color: Colors.white),
+                        color: widget.title == "profile"
+                            ? kButtonColor
+                            : Colors.white),
                   ],
                 ),
               ),

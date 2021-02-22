@@ -711,7 +711,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: NavigationBar(),
+      bottomNavigationBar: NavigationBar(title: "home"),
     );
   }
 }

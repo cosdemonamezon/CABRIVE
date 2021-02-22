@@ -28,69 +28,92 @@ class _NotificationScreenState extends State<NotificationScreen> {
           child: ListView(
             children: [
               GestureDetector(
-                onTap: (){
-                  Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => DetailNoti()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => DetailNoti()));
                 },
                 child: messageCard(
-                  "Aenean sed lorem est. Sed quis", 
-                  "assets/icons/Live Recording.svg", 
-                  "neque ut nibh suscipit imperdiet ac "
-                ),
+                    "Aenean sed lorem est. Sed quis",
+                    "assets/icons/Live Recording.svg",
+                    "neque ut nibh suscipit imperdiet ac "),
               ),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => DetailNoti()));
-                },
-                child: messageCard("Vivamus eget aliquam dui. Integer eu", "assets/icons/news-01.svg", "arcu vel arcu suscipit ultrices quis ")),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => DetailNoti()));
+                  },
+                  child: messageCard(
+                      "Vivamus eget aliquam dui. Integer eu",
+                      "assets/icons/news-01.svg",
+                      "arcu vel arcu suscipit ultrices quis ")),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => DetailNoti()));
-                },
-                child: messageCard("Vivamus eget aliquam dui. Integer eu", "assets/icons/Megaphone.svg", "tempor. Nunc faucibus pellentesque ")),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => DetailNoti()));
+                  },
+                  child: messageCard(
+                      "Vivamus eget aliquam dui. Integer eu",
+                      "assets/icons/Megaphone.svg",
+                      "tempor. Nunc faucibus pellentesque ")),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => DetailNoti()));
-                },
-                child: messageCard("Cras gravida bibendum dolor eu varius. Morbi fermentum velit nisl, ", "assets/icons/news-01.svg", "arcu vel arcu suscipit ultrices quis ")),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => DetailNoti()));
+                  },
+                  child: messageCard(
+                      "Cras gravida bibendum dolor eu varius. Morbi fermentum velit nisl, ",
+                      "assets/icons/news-01.svg",
+                      "arcu vel arcu suscipit ultrices quis ")),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => DetailNoti()));
-                },
-                child: messageCard("Vivamus eget aliquam dui. Integer eu", "assets/icons/news-01.svg", "aliquam turpis aliquam vitae. Praesent  ")),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => DetailNoti()));
+                  },
+                  child: messageCard(
+                      "Vivamus eget aliquam dui. Integer eu",
+                      "assets/icons/news-01.svg",
+                      "aliquam turpis aliquam vitae. Praesent  ")),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => DetailNoti()));
-                },
-                child: messageCard("Vivamus eget aliquam dui. Integer eu", "assets/icons/Megaphone.svg", "arcu vel arcu suscipit ultrices quis ")),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => DetailNoti()));
+                  },
+                  child: messageCard(
+                      "Vivamus eget aliquam dui. Integer eu",
+                      "assets/icons/Megaphone.svg",
+                      "arcu vel arcu suscipit ultrices quis ")),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => DetailNoti()));
-                },
-                child: messageCard("Vivamus eget aliquam dui. Integer eu", "assets/icons/news-01.svg", "arcu vel arcu suscipit ultrices quis ")),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => DetailNoti()));
+                  },
+                  child: messageCard(
+                      "Vivamus eget aliquam dui. Integer eu",
+                      "assets/icons/news-01.svg",
+                      "arcu vel arcu suscipit ultrices quis ")),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => DetailNoti()));
-                },
-                child: messageCard("Vivamus eget aliquam dui. Integer eu", "assets/icons/Live Recording.svg", "arcu vel arcu suscipit ultrices quis ")),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => DetailNoti()));
+                  },
+                  child: messageCard(
+                      "Vivamus eget aliquam dui. Integer eu",
+                      "assets/icons/Live Recording.svg",
+                      "arcu vel arcu suscipit ultrices quis ")),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => DetailNoti()));
-                },
-                child: messageCard("Vivamus eget aliquam dui. Integer eu", "assets/icons/Megaphone.svg", "arcu vel arcu suscipit ultrices quis ")),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => DetailNoti()));
+                  },
+                  child: messageCard(
+                      "Vivamus eget aliquam dui. Integer eu",
+                      "assets/icons/Megaphone.svg",
+                      "arcu vel arcu suscipit ultrices quis ")),
             ],
           ),
         ),
       ),
-      bottomNavigationBar: NavigationBar(),
+      bottomNavigationBar: NavigationBar(title: "notification"),
     );
   }
 
@@ -99,7 +122,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       color: kBackgroundColor,
       child: ListTile(
         leading: Container(
-          child: SvgPicture.asset(            
+          child: SvgPicture.asset(
             img,
             height: 30,
             width: 30,
@@ -115,13 +138,16 @@ class _NotificationScreenState extends State<NotificationScreen> {
         title: Text(
           title,
           style: TextStyle(
-            fontWeight: FontWeight.w400, fontSize: 16, color: kFontPrimaryColor
-          ),
+              fontWeight: FontWeight.w400,
+              fontSize: 16,
+              color: kFontPrimaryColor),
         ),
         subtitle: Text(
-          subtitle,style: TextStyle(
-            fontWeight: FontWeight.w400, fontSize: 16, color: kFontPrimaryColor
-          ),
+          subtitle,
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 16,
+              color: kFontPrimaryColor),
         ),
       ),
     );
