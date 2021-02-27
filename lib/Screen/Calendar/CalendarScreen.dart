@@ -417,7 +417,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                           margin: const EdgeInsets.only(top: 20),
                           child: Image.asset(
                             "assets/logo/surface1.png",
-                            fit: BoxFit.cover,
+                            fit: BoxFit.fill,
                           ),
                         ),
                         Padding(
@@ -486,7 +486,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                         margin: const EdgeInsets.only(top: 25),
                         child: Image.asset(
                           "assets/logo/STADE_ROCHELAIS.png",
-                          fit: BoxFit.cover,
+                          fit: BoxFit.fill,
                         ),
                       ),
                       Padding(
@@ -522,7 +522,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                             margin: const EdgeInsets.only(top: 20),
                             child: Image.asset(
                               "assets/logo/Image3.png",
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                             ),
                           ),
                           Padding(

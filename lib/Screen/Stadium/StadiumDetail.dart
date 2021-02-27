@@ -158,7 +158,7 @@ class _StadiumDetailState extends State<StadiumDetail> {
                                         //color: Colors.pink,
                                         child: Image.asset(
                                           "assets/logo/surface1.png",
-                                          fit: BoxFit.cover,
+                                          fit: BoxFit.fill,
                                         ),
                                       ),
                                       Padding(
@@ -238,7 +238,7 @@ class _StadiumDetailState extends State<StadiumDetail> {
                                         //child: SvgPicture.asset("assets/icons/Image 5.svg"),
                                         child: Image.asset(
                                           "assets/logo/STADE_ROCHELAIS.png",
-                                          fit: BoxFit.cover,
+                                          fit: BoxFit.fill,
                                         ),
                                       ),
                                       Padding(

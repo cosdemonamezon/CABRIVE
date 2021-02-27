@@ -1,4 +1,5 @@
 import 'package:CABRIVE/Screen/New/NewsScreen.dart';
+import 'package:CABRIVE/Screen/Sport/SportScreen.dart';
 import 'package:CABRIVE/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -96,6 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: CircleAvatar(
                               backgroundColor: kCicleColor,
                               radius: 40,
+                              backgroundImage: AssetImage("assets/icons/user2.png"),
                             ),
                           ),
                           Padding(
@@ -510,8 +512,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 color: kFontPrimaryColor)),
                         GestureDetector(
                           onTap: () {
-                            // Navigator.push(
-                            //   context, MaterialPageRoute(builder: (context) => StadiumScreen()));
+                            Navigator.push(
+                              context, MaterialPageRoute(builder: (context) => SportScreen()));
                           },
                           child: Text("SEE ALL >",
                               style: TextStyle(
